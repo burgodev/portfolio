@@ -1,7 +1,7 @@
-<template>
+<!--<template>
   <section class="banner background-color">
 
-    <div class="wrapper run-animation">
+   <div class="wrapper run-animation">
 
         <v-row class="title-animation" style="    text-align: center;" >
           <v-col cols="12">
@@ -18,7 +18,7 @@
 
 
 
-    <!-- <div class="images"></div> -->
+     <div class="images"></div>
 
   </section>
 </template>
@@ -459,3 +459,4 @@
     }
   }
 </style>
+-->
