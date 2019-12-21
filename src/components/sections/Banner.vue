@@ -1,24 +1,24 @@
-<!--<template>
+<template>
   <section class="banner background-color">
+    <div class="wrapper run-animation">
 
-   <div class="wrapper run-animation">
 
-        <v-row class="title-animation" style="    text-align: center;" >
-          <v-col cols="12">
-            <h1> FILIPE BURGONOVO</h1>
+      <v-row class="title-animation" style="    align-self: center;    text-align: center;">
+        <v-row>
+          <v-col cols="12" >
+            <h1 style="font-size: -webkit-xxx-large; "> FRONT-END DEVELOPER</h1>
+
           </v-col>
-          <v-col cols="12">
-            <h2> FRONT-END DEVELOPER</h2>
+          <v-col cols="12" >
+            <h2 style="     font-size: larger; "> FILIPE BURGONOVO</h2>
           </v-col>
         </v-row>
+      </v-row>
 
 
     </div>
+    <div class="images"></div>
 
-
-
-
-     <div class="images"></div>
 
   </section>
 </template>
@@ -26,29 +26,107 @@
 <script>
   import {isMobile} from "mobile-device-detect";
 
+
   export default {
     name: "Banner.vue",
     components: {},
 
     data: () => ({
-      mobile: isMobile ? true : false
+      mobile: isMobile ? true : false,
+      beginTypewriting: false,
     }),
 
     methods: {
       initialize() {
+
+      },
+
+      typewriter() {
+
+
+        let h1 = document.querySelector('h1');
+        let h2 = document.querySelector('h2');
+        let stringH1 = h1.innerHTML.split('');
+        let stringH2 = h2.innerHTML.split('');
+
+        h1.innerHTML = '';
+        stringH1.forEach((letter, i) => {
+          setTimeout(() => h1.innerHTML += letter, 100 * i);
+        });
+
+        h2.innerHTML = '';
+
+        setTimeout(() =>  stringH2.forEach((letter, i) => {
+          setTimeout(() => h2.innerHTML += letter, 115 * i);
+        }), 1500);
+
+
+
       }
+
+
     },
 
     created() {
+
+      setTimeout(() => this.typewriter(), 3200);
+
     }
-  };
+  }
+  ;
 </script>
 
 
 <style scoped>
   /* To usando */
+
+
+  h1 {
+
+    text-align: center;
+
+    font-family: 'Michroma', sans-serif;
+    color: #fff;
+
+  }
+
+  h1::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+  h2 {
+
+    text-align: center;
+
+    font-family: 'Michroma', sans-serif;
+    color: #fff;
+
+  }
+
+  h2::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+
   .banner {
-    height: 100%;
+
     width: 100%;
     color: #fff !important;
   }
@@ -62,7 +140,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
   }
 
   .images {
@@ -87,74 +165,50 @@
     10% {
       opacity: 0.6;
 
-      transform: scale(1.08);
-      background-image: linear-gradient(
-        to right bottom,
-        rgba(255, 0, 0, 0.1),
-        rgba(255, 100, 100, 0.1)
-      ),
-      url("/../assets/banner01.jpg");
+      transform: scale(1.4);
+      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      url("/src/assets/banner01.jpg");
     }
 
     20% {
       opacity: 0.6;
-      transform: scale(1.06);
-      background-image: linear-gradient(
-        to right bottom,
-        rgba(0, 132, 255, 0.1),
-        rgba(133, 210, 255, 0.1)
-      ),
-      url("../assets/banner02.jpg");
+      transform: scale(1.35);
+      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      url("../../assets/banner02.jpg");
     }
 
     30% {
       opacity: 0.6;
-      transform: scale(1.04);
+      transform: scale(1.3);
 
-      background-image: linear-gradient(
-        to right bottom,
-        rgba(255, 238, 0, 0.1),
-        rgba(255, 227, 104, 0.1)
-      ),
-      url("../assets/banner03.png");
+      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      url("../../assets/banner03.png");
     }
 
     40% {
       opacity: 0.6;
-      transform: scale(1.02);
-      background-image: linear-gradient(
-        to right bottom,
-        rgba(153, 0, 255, 0.1),
-        rgba(220, 176, 255, 0.1)
-      ),
-      url("../assets/banner04.jpg");
+      transform: scale(1.25);
+      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      url("../../assets/banner04.jpg");
     }
 
     50% {
       opacity: 0.6;
-      transform: scale(1);
-      background-image: linear-gradient(
-        to right bottom,
-        rgba(255, 123, 0, 0.1),
-        rgba(255, 152, 56, 0.1)
-      ),
-      url("../assets/banner05.jpg");
+      transform: scale(1.2);
+      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      url("../../assets/banner05.jpg");
     }
 
     60% {
       opacity: 0.6;
-      transform: scale(0.98);
-      background-image: linear-gradient(
-        to right bottom,
-        rgba(0, 255, 0, 0.1),
-        rgba(156, 156, 156, 0.1)
-      ),
-      url("../assets/banner06.jpg");
+      transform: scale(1.15);
+      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      url("../../assets/banner06.jpg");
     }
 
     70% {
       opacity: 0.4;
-      transform: scale(0.96);
+      transform: scale(1.1);
     }
 
     80% {
@@ -163,18 +217,18 @@
 
     90% {
       opacity: 0;
-      transform: scale(0.94);
+      transform: scale(1.05);
     }
 
     100% {
-      transform: scale(0.92);
+      transform: scale(1);
       opacity: 0;
     }
   }
 
   .wrapper.run-animation {
     -webkit-animation: grow linear 3s forwards;
-    animation: grow linear 3s 500ms forwards;
+    animation: grow linear 3s 1250ms forwards;
   }
 
   .title-animation {
@@ -198,14 +252,12 @@
   @keyframes grow {
     0% {
       opacity: 0;
-      transform: scale(0.95);
+      transform: scale(0.93);
 
 
       /*-webkit-transform: scale(0.95);*/
-      background-image: linear-gradient(to right bottom,
-      rgba(255, 255, 255, 0.4),
-      rgba(0, 0, 0, 1)),
-      url("../assets/banner05.jpg");
+      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      url("../../assets/banner04.jpg");
 
     }
 
@@ -221,10 +273,8 @@
       opacity: 1;
 
 
-      background-image: linear-gradient(to right bottom,
-      rgba(255, 255, 255, 0.4),
-      rgba(0, 0, 0, 1)),
-      url("../assets/banner05.jpg");
+      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      url("../../assets/banner04.jpg");
     }
   }
 
@@ -238,6 +288,7 @@
       opacity: 1;
     }
   }
+
 
   /* Até aqui */
 
@@ -458,5 +509,6 @@
       transform: translateX(98%);
     }
   }
+
+
 </style>
--->

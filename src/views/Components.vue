@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="height-100 background-color">
       <Menu/>
 
 
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Delete from "../components/Dialogs/Delete.vue";
+import Delete from "../components/dialogs/Delete.vue";
 import Menu from "../components/Menu.vue";
 export default {
   name: "Components",

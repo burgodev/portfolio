@@ -1,9 +1,11 @@
 <template>
-  <v-app class="background-color margin-0">
-    <v-app-bar
+ <v-app class="background-color margin-0">
+   <!--  <v-app-bar
       app
       color="primary"
       dark
+      flat
+      dense
     >
       <div class="d-flex align-center">
         <v-img
@@ -34,11 +36,24 @@
       >
         <span class="mr-2">Latest Release</span>
         <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
+      </v-btn> -->
 
-    <v-content>
+
+    <!--<v-row>
+      <v-col sm="2" md="2" lg="2" xl="2" cols="2">
+        <v-btn text> HOME </v-btn>
+        <v-btn text> HOME </v-btn>
+        <v-btn text> HOME </v-btn>
+        <v-btn text> HOME </v-btn>
+      </v-col>
+    </v-row> -->
+   <Toolbar/>
+
+    <v-content class="padding-0">
+      <Banner/>
+
       <Components/>
+
     </v-content>
 
     
@@ -47,8 +62,9 @@
 
 <script>
   import HelloWorld from './components/HelloWorld';
-  import Banner from './components/Banner';
+  import Banner from './components/sections/Banner';
   import Components from './views/Components';
+  import Toolbar from './components/general/Toolbar';
 
 export default {
   name: 'App',
@@ -56,7 +72,8 @@ export default {
   components: {
     Components,
     HelloWorld,
-    Banner
+    Banner,
+    Toolbar
   },
 
   data: () => ({

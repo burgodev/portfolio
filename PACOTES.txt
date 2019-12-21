@@ -1,0 +1,1 @@
+mobile-device-detect (yarn add mobile-device-detect)

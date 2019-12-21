@@ -2,8 +2,8 @@
   <div>
     <v-menu bottom>
       <template v-slot:activator="{ on }">
-        <v-btn v-on="on" fab icon outlined fixed>
-          <v-icon>menu</v-icon>
+        <v-btn color="white" v-on="on" fab icon outlined >
+          <v-icon color="white">menu</v-icon>
         </v-btn>
       </template>
 
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import Delete from "./Dialogs/Delete";
+  import Delete from "./dialogs/Delete";
   import Gallery from "./Gallery";
 export default {
   name: "Menu",
