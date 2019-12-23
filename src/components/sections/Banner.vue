@@ -1,9 +1,10 @@
 <template>
-  <section class="banner background-color">
+  <section class="banner black">
     <div class="wrapper run-animation">
 
 
-      <v-row class="title-animation" style="    align-self: center;    text-align: center;">
+
+      <v-row class="title-animation align-center text-align: center;" >
         <v-row>
           <v-col cols="12" >
             <h1 style="font-size: -webkit-xxx-large; "> FRONT-END DEVELOPER</h1>
@@ -115,14 +116,7 @@
     animation: blink .7s infinite;
   }
 
-  @keyframes blink {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
+
 
 
   .banner {
@@ -163,46 +157,46 @@
 
   @keyframes imagesAnimation {
     10% {
-      opacity: 0.6;
+      opacity: 1;
 
       transform: scale(1.4);
-      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)),
       url("/src/assets/banner01.jpg");
     }
 
     20% {
-      opacity: 0.6;
+
       transform: scale(1.35);
-      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)),
       url("../../assets/banner02.jpg");
     }
 
     30% {
-      opacity: 0.6;
+
       transform: scale(1.3);
 
-      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)),
       url("../../assets/banner03.png");
     }
 
     40% {
-      opacity: 0.6;
+
       transform: scale(1.25);
-      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)),
       url("../../assets/banner04.jpg");
     }
 
     50% {
       opacity: 0.6;
       transform: scale(1.2);
-      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5)),
       url("../../assets/banner05.jpg");
     }
 
     60% {
       opacity: 0.6;
       transform: scale(1.15);
-      background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4)),
       url("../../assets/banner06.jpg");
     }
 
@@ -227,32 +221,23 @@
   }
 
   .wrapper.run-animation {
-    -webkit-animation: grow linear 3s forwards;
-    animation: grow linear 3s 1250ms forwards;
+    -webkit-animation: grow linear 2.5s 2s forwards;
+    animation: grow linear 2.5s 2s forwards;
   }
 
   .title-animation {
     opacity: 0;
-    -webkit-animation: title linear 10s forwards;
-    animation: title linear 3s 3s forwards;
+    -webkit-animation: fade-in linear 3s 3s forwards;
+    animation: fade-in linear 3s 3s forwards;
   }
 
-  @keyframes title {
-    0% {
-      opacity: 0;
-    }
 
-    100% {
-      opacity: 1;
-    }
-
-  }
 
 
   @keyframes grow {
     0% {
       opacity: 0;
-      transform: scale(0.93);
+      transform: scale(0.9);
 
 
       /*-webkit-transform: scale(0.95);*/
@@ -262,7 +247,7 @@
     }
 
     50% {
-      opacity: 0.3;
+
 
 
     }

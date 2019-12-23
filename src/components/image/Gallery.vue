@@ -1,5 +1,5 @@
 <template>
-    <v-card flat>
+
         <v-row>
             <v-col sm="2" md="2" lg="2" xl="2" cols="2" class="align-center text-right">
                 <v-btn text icon x-large color="black" @click="previousPhoto()" :disabled="previousDisabled">
@@ -23,7 +23,7 @@
                 </v-btn>
             </v-col>
         </v-row>
-    </v-card>
+
 </template>
 
 <script>
