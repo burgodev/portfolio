@@ -3,7 +3,7 @@
 }
 
 .background-gradient {
-    background: linear-gradient(to right bottom, rgba(126, 123, 130), rgba(0, 0, 0)) !important;
+    background: linear-gradient(to right bottom, rgba(126, 123, 130), rgba(0, 0, 0, 0)) !important;
     background-image: linear-gradient(to right bottom, rgb(126, 123, 130), rgb(0, 0, 0)) !important
 }
 
@@ -51,6 +51,10 @@
     color: transparent
 }
 
+.width-fill{
+    width: -webkit-fill-available !important;
+
+}
 
 /* ALIGN */
 .align-end {
@@ -67,7 +71,11 @@
 
 /* JUSTIFY */
 .justify-end {
-    justify-content: flex-end;
+     justify-content: flex-end;
+ }
+
+.justify-center {
+    justify-content: center;
 }
 
 
@@ -90,6 +98,13 @@
 
 .pointer{
     cursor: pointer;
+}
+
+/* ANIMATIONS */
+.toolbar-animation {
+    opacity: 0;
+    -webkit-animation: fade-in ease-in 2.5s 7s forwards;
+    animation: fade-in ease-in 2.5s 7s forwards;
 }
 
 /* KEYFRAMES */

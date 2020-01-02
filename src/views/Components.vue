@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="height-100 white">
+  <v-container fluid class="white">
     <v-row class="title-animation align-center text-align: center;">
 
 
@@ -11,7 +11,7 @@
       </v-col>
     </v-row>
 
-    <v-row  no-gutters>
+    <v-row no-gutters>
       <v-col cols="1" class="text-center">
         <v-menu bottom>
           <template v-slot:activator="{ on }">
@@ -41,10 +41,13 @@
     </v-row>
 
     <v-row style="margin-top: 30px">
-      <Confirmation v-if="confirmation" ref="Confirmation"/>
-      <Gallery v-if="gallery"/>
-      <CardsGrid v-if="cardsGrid"/>
-      <DataTable v-if="dataTable"/>
+      <!-- TIRAR -->
+      <v-card flat min-height="500px" class="width-fill">
+        <Confirmation v-if="confirmation" ref="Confirmation"/>
+        <Gallery v-if="gallery"/>
+        <CardsGrid v-if="cardsGrid"/>
+        <DataTable v-if="dataTable"/>
+      </v-card>
     </v-row>
   </v-container>
 </template>
@@ -81,7 +84,6 @@
       dataTable: false,
 
 
-
     }),
 
     methods: {
@@ -108,7 +110,7 @@
       },
 
 
-      showConfirmation(){
+      showConfirmation() {
         this.confirmation = true;
       },
 
@@ -120,7 +122,7 @@
         this.cardsGrid = true;
       },
 
-      showDataTable(){
+      showDataTable() {
         this.dataTable = true;
       },
 
@@ -136,7 +138,7 @@
 
 <style scoped>
 
-  .blink{
+  .blink {
     animation: blink 1s infinite;
   }
 </style>

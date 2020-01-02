@@ -1,25 +1,24 @@
 <template>
-  <v-container fluid class="white">
-
-    <section class="image-cards mt-3 mx-5 mx-auto">
-      <div class="image-cards__content">
-        <a
-          target="_blank"
-          class="image-cards__item d-flex align-items-center justify-content-center"
-          href="https://vuejs.org/"
-        ></a>
-        <a
-          target="_blank"
-          class="image-cards__item d-flex align-items-center justify-content-center"
-          href="https://vuetifyjs.com/pt-BR/"
-        ></a>
-        <a
-          target="_blank"
-          class="image-cards__item d-flex align-items-center justify-content-center"
-          href="https://github.com/"
-        ></a>
-      </div>
-    </section>
+  <v-container fluid class="white align-center" >
+      <section class="image-cards mt-3 mx-5 mx-auto" >
+        <div class="image-cards__content">
+          <a
+            target="_blank"
+            class="image-cards__item d-flex align-items-center justify-content-center"
+            href="https://vuejs.org/"
+          ></a>
+          <a
+            target="_blank"
+            class="image-cards__item d-flex align-items-center justify-content-center"
+            href="https://vuetifyjs.com/pt-BR/"
+          ></a>
+          <a
+            target="_blank"
+            class="image-cards__item d-flex align-items-center justify-content-center"
+            href="https://github.com/"
+          ></a>
+        </div>
+      </section>
   </v-container>
 </template>
 

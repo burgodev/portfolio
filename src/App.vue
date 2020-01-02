@@ -49,17 +49,18 @@
     </v-row> -->
     <Toolbar/>
 
-    <v-content class="padding-0 white">
+    <v-container fluid class="padding-0 white">
+      <Banner id="banner"/>
+      <Tools id="tools"/>
+      <Components id="components"/>
 
-      <Banner/>
+      <Vision id="vision"/>
 
-      <Tools/>
-      <RotatingCards class="mb-12"/>
+    </v-container>
 
-      <Components class="mt-12"/>
 
-    </v-content>
 
+    <Footer class="mt-12"></Footer>
 
   </v-app>
 </template>
@@ -68,25 +69,44 @@
   import HelloWorld from './components/HelloWorld';
   import Banner from './components/sections/Banner';
   import Tools from './components/sections/Tools';
-  import RotatingCards from './components/sections/RotatingCards';
+  import Vision from './components/sections/Vision';
+  import RotatingCards from './components/general/RotatingCards';
   import Components from './views/Components';
   import Toolbar from './components/general/Toolbar';
+  import Footer from './components/general/Footer';
+
 
   export default {
     name: 'App',
 
     components: {
+      Footer,
       Components,
       HelloWorld,
       Banner,
       Toolbar,
       Tools,
-      RotatingCards
+      RotatingCards,
+      Footer,
+      Vision,
+
     },
 
     data: () => ({
+
       //
     }),
+
+    methods:{
+      openMenu(){
+        this.$refs.Menu.open();
+      },
+
+      initialize(){
+
+      }
+
+    }
 
   };
 </script>

@@ -1,26 +1,34 @@
 <template>
   <section class="banner black">
     <div class="wrapper run-animation">
+      <v-row class="title-animation">
+        <v-col cols="12" style="padding: 12.5rem;">
+          <v-row class="justify-center">
 
-
-
-      <v-row class="title-animation align-center text-align: center;" >
-        <v-row>
-          <v-col cols="12" >
             <h1 style="font-size: -webkit-xxx-large; "> FRONT-END DEVELOPER</h1>
+          </v-row>
 
-          </v-col>
-          <v-col cols="12" >
+          <v-row class="justify-center">
             <h2 style="     font-size: larger; "> FILIPE BURGONOVO</h2>
-          </v-col>
-        </v-row>
+
+          </v-row>
+        </v-col>
+
+        <v-col cols="12" class="text-center toolbar-animation">
+          <v-btn text @click="$vuetify.goTo('#tools', {duration: 750, offset: -100, easing: 'linear'})">
+            <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130"
+                 preserveAspectRatio="xMidYMid meet">
+              <g fill="none" fill-rule="evenodd">
+                <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36"/>
+                <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF"/>
+              </g>
+            </svg>
+          </v-btn>
+        </v-col>
       </v-row>
-
-
     </div>
-    <div class="images"></div>
 
-
+    <div class="images"/>
   </section>
 </template>
 
@@ -57,10 +65,9 @@
 
         h2.innerHTML = '';
 
-        setTimeout(() =>  stringH2.forEach((letter, i) => {
+        setTimeout(() => stringH2.forEach((letter, i) => {
           setTimeout(() => h2.innerHTML += letter, 115 * i);
         }), 1500);
-
 
 
       }
@@ -78,8 +85,49 @@
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
   /* To usando */
+
+
+  /* MOUSE ANIMATION */
+  $mouse-width: 2.5rem;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  .mouse {
+    max-width: $mouse-width;
+    width: 100%;
+    height: auto;
+  }
+
+  .scroll {
+    animation-name: scroll;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500);
+    animation-iteration-count: infinite;
+    transform-origin: 50% 20.5px;
+    will-change: transform, opacity;
+    opacity: 1;
+  }
+
+  @keyframes scroll {
+
+    0%, 20% {
+      transform: translateY(0) scaleY(1);
+    }
+
+    100% {
+      transform: translateY(36px) scaleY(2);
+      opacity: 0;
+    }
+
+  }
+
+  /* MOUSE ANIMATION END */
 
 
   h1 {
@@ -117,10 +165,7 @@
   }
 
 
-
-
   .banner {
-
     width: 100%;
     color: #fff !important;
   }
@@ -232,8 +277,6 @@
   }
 
 
-
-
   @keyframes grow {
     0% {
       opacity: 0;
@@ -247,7 +290,6 @@
     }
 
     50% {
-
 
 
     }
