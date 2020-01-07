@@ -39,6 +39,9 @@
       <v-spacer></v-spacer>
 
     </v-row>
+    <v-row>
+      <RotatingMenu></RotatingMenu>
+    </v-row>
 
     <v-row style="margin-top: 30px">
       <!-- TIRAR -->
@@ -57,6 +60,7 @@
   import Gallery from "../components/image/Gallery";
   import CardsGrid from "../components/general/CardsGrid";
   import DataTable from "../components/general/DataTable";
+  import RotatingMenu from "../components/general/RotatingMenu";
 
   export default {
     name: "Components",
@@ -64,7 +68,8 @@
       Gallery,
       Confirmation,
       CardsGrid,
-      DataTable
+      DataTable,
+      RotatingMenu
     },
 
 

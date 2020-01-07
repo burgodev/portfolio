@@ -62,10 +62,10 @@
       transform-origin: center;
       transform-style: preserve-3d;
       transform: translateZ(-30vw) rotateY(0);
-      animation: carousel 8s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+      animation: carousel 7s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
 
       &.step-animation {
-        animation: carousel 8s infinite steps(1) forwards;
+        animation: carousel 7s infinite steps(1) forwards;
       }
     }
 
@@ -161,18 +161,18 @@
 
   @keyframes carousel {
     0%,
-    17.5% {
+    12.5% {
       transform: translateZ(-35vw) rotateY(0);
     }
-    27.5%,
-    45% {
+    25%,
+    42.5% {
       transform: translateZ(-35vw) rotateY(-120deg);
     }
-    55%,
-    72.5% {
+    57.5%,
+    75% {
       transform: translateZ(-35vw) rotateY(-240deg);
     }
-    82.5%,
+    90%,
     100% {
       transform: translateZ(-35vw) rotateY(-360deg);
     }

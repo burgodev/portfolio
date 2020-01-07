@@ -20,12 +20,10 @@
     <Delete ref="Delete" />
     <Gallery v-if="gallery"/>
     <CardsGrid v-if="cardsGrid"/>
-
   </div>
 </template>
 
 <script>
-
 
 export default {
   name: "Menu",

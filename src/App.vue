@@ -56,6 +56,8 @@
 
       <Vision id="vision"/>
 
+
+
     </v-container>
 
 
@@ -74,6 +76,7 @@
   import Components from './views/Components';
   import Toolbar from './components/general/Toolbar';
   import Footer from './components/general/Footer';
+  import RotatingMenu from './components/general/RotatingMenu';
 
 
   export default {
@@ -89,6 +92,7 @@
       RotatingCards,
       Footer,
       Vision,
+      RotatingMenu
 
     },
 
