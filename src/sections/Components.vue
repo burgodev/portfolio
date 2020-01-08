@@ -1,13 +1,8 @@
 <template>
-  <v-container fluid class="white">
-    <v-row class="title-animation align-center text-align: center;">
-
-
+  <v-container fluid class="white padding-0 translateTop ">
+    <v-row class="align-center ">
       <v-col cols="12" class="text-center">
         <h1 style="font-size: -webkit-xxx-large;  font-family: Michroma;"> Biblioteca de Componentes</h1>
-      </v-col>
-      <v-col cols="12" class="ml-2">
-
       </v-col>
     </v-row>
 
@@ -33,25 +28,20 @@
       <v-col v-if="clickHere" class="align-center blink" cols="3">
         <v-icon>arrow_back_ios</v-icon>
         <span class="black--text   "> Clique aqui! </span>
-
       </v-col>
-
       <v-spacer></v-spacer>
-
-    </v-row>
-    <v-row>
-      <RotatingMenu></RotatingMenu>
     </v-row>
 
-    <v-row style="margin-top: 30px">
-      <!-- TIRAR -->
-      <v-card flat min-height="500px" class="width-fill">
-        <Confirmation v-if="confirmation" ref="Confirmation"/>
-        <Gallery v-if="gallery"/>
-        <CardsGrid v-if="cardsGrid"/>
-        <DataTable v-if="dataTable"/>
+    <v-row class="paddingComponents">
+      <v-card flat min-height="100vh" class="width-fill">
+        <Confirmation v-if="confirmation" ref="Confirmation" class="paddingComponents"/>
+        <Gallery v-if="gallery" class="paddingComponents"/>
+        <CardsGrid v-if="cardsGrid" class="paddingComponents"/>
+        <DataTable v-if="dataTable" class="paddingComponents"/>
       </v-card>
     </v-row>
+
+    <CuttedEdgeLeft/>
   </v-container>
 </template>
 
@@ -61,6 +51,7 @@
   import CardsGrid from "../components/general/CardsGrid";
   import DataTable from "../components/general/DataTable";
   import RotatingMenu from "../components/general/RotatingMenu";
+  import CuttedEdgeLeft from "../components/cuttedEdges/CuttedEdgeLeft"
 
   export default {
     name: "Components",
@@ -69,7 +60,8 @@
       Confirmation,
       CardsGrid,
       DataTable,
-      RotatingMenu
+      RotatingMenu,
+      CuttedEdgeLeft
     },
 
 
@@ -145,5 +137,9 @@
 
   .blink {
     animation: blink 1s infinite;
+  }
+
+  .paddingComponents{
+    padding-top: 75px;
   }
 </style>

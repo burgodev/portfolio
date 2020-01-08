@@ -36,6 +36,11 @@
     font-size: x-small;
 }
 
+/* FONT */
+.mainFont{
+    font-family: Michroma;
+}
+
 
 .margin-0 {
     margin: 0px;
@@ -45,15 +50,27 @@
     padding: 0px !important;
 }
 
+.titlePadding{
+    padding-bottom: 50px;
+
+}
+
 .transparent {
-    background-color: transparent;
-    border-color: transparent;
-    color: transparent
+    background-color: transparent !important;
+    border-color: transparent !important;
+
 }
 
 .width-fill{
     width: -webkit-fill-available !important;
+}
 
+.translateTop{
+    transform: translateY(-8vw) ;
+}
+
+.padding-bottom{
+    padding-bottom: 150px !important;
 }
 
 /* ALIGN */

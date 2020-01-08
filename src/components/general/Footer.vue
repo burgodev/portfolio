@@ -2,8 +2,8 @@
   <v-footer
     dark
     padless
-    color="#aeddff"
-    class="white"
+    color="rgb(245, 245, 245)"
+
 
     height="200px"
 
@@ -46,9 +46,7 @@
 
 <style scoped>
 
-  .margin-top-55 {
-    margin-top: 55px;
-  }
+
 
   .footerBack{
     background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4));

@@ -1,24 +1,22 @@
 <template>
   <v-container fluid>
     <!-- DESKTOP -->
-    <v-col cols="12" class="text-center">
-      <h1 style="font-size: -webkit-xxx-large;  font-family: Michroma;"> Ferramentas</h1>
-    </v-col>
 
-    <section style="background-color: white;" v-if="!mobile">
+
+    <section class="white" v-if="!mobile">
       <div class="screen">
         <div class="content">
-          <h2 style="color: #ffcc00">Javascript</h2>
+          <h2 style="color: #ffcc00;" class="mainFont">Javascript</h2>
         </div>
       </div>
       <div class="screen">
         <div class="content">
-          <h2>HTML 5</h2>
+          <h2 class="mainFont">HTML 5</h2>
         </div>
       </div>
       <div class="screen">
         <div class="content">
-          <h2 style="color: #71b2de">CSS 3</h2>
+          <h2 style="color: #71b2de" class="mainFont">CSS 3</h2>
         </div>
       </div>
     </section>
@@ -97,15 +95,7 @@
 </script>
 
 <style scoped>
-  h2 {
-    font-family: "Bangers";
-  }
-
-  p {
-    font-family: "Bangers";
-  }
-
-  section {
+   section {
     position: relative;
     height: 100vh;
     display: flex;
@@ -218,56 +208,8 @@
     transform: rotateZ(0deg);
   }
 
-  section .screen:nth-child(6) {
-    background: url("../../assets/POST14.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transform: rotateZ(5deg);
-    transition: 2s;
-  }
 
-  section .screen:nth-child(6):hover {
-    transform: rotateZ(0deg);
-  }
 
-  /*
-    section:nth-child(2) .screen:nth-child(1) {
-      background: url("../../assets/POST08.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      transform: rotateZ(5deg);
-      transition: 2s;
-    }
-
-    section:nth-child(2) .screen:nth-child(2) {
-      background: url("../../assets/POST10.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      transform: rotateZ(5deg);
-      transition: 2s;
-    }
-
-    section:nth-child(3) .screen:nth-child(1) {
-      background: url("../../assets/POST12.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      transform: rotateZ(5deg);
-      transition: 2s;
-    }
-
-    section:nth-child(3) .screen:nth-child(2) {
-      background: url("../../assets/POST14.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      transform: rotateZ(5deg);
-      transition: 2s;
-    }
-  */
   section .screen .content2 /*Mobile*/
   {
     position: absolute;
@@ -301,7 +243,7 @@
   }
 
   section .screen:hover .content {
-    transform: translateX(0);
+    transform: translateX(-10%);
     transition-delay: 0.5s;
   }
 

@@ -1,9 +1,14 @@
 <template>
-  <v-container fluid class="white">
-    <v-row>
+  <v-container fluid class="padding-0  transparent"  >
+    <v-row class="align-center titlePadding">
+      <v-col cols="12" class="text-center">
+        <h1 style="font-size: -webkit-xxx-large;  font-family: Michroma;"> Mindset</h1>
+      </v-col>
+    </v-row>
+    <v-row class="padding-bottom">
       <v-col sm="6" md="6" lg="6" xl="6" cols="6">
         <v-img
-          :src="require('../../assets/burgo.jpg')"
+          :src="require('../assets/burgo.jpg')"
           height="100vh"
           contain
         />
@@ -41,21 +46,46 @@
 
       </v-col>
     </v-row>
+    <CuttedEdgeRight/>
   </v-container>
 </template>
 
 <script>
+  import CuttedEdgeRight from '../components/cuttedEdges/CuttedEdgeRight'
+
   export default {
+    components: {
+      CuttedEdgeRight
+    },
     name: "Vision.vue"
   }
 </script>
 
 <style>
   .visionBackground {
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .1)), url("../../assets/paper6.jpg");
-    background-size: cover;
-    width: -webkit-fill-available;
+    background-color: #121212;
+    content: "";
+    height: 100%;
+    left: -100%;
+    position: absolute;
+    top: 0;
+    transform: rotate(-25deg);
+    width: 300%;
+  }
 
 
+  .t-technology-tech::before {
+    background-color: #121212;
+    content: "";
+    height: 100%;
+    left: -100%;
+    position: absolute;
+    top: 0;
+    transform: rotate(-25deg);
+    width: 300%;
+  }
+
+  .translateTop2{
+    transform: translateY(-15vw)
   }
 </style>

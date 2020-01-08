@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5">
+  <div class="mt-5 ">
     <v-menu bottom>
       <template v-slot:activator="{ on }">
         <v-btn color="black" v-on="on" fab icon outlined >
@@ -17,9 +17,6 @@
       </v-list>
     </v-menu>
 
-    <Delete ref="Delete" />
-    <Gallery v-if="gallery"/>
-    <CardsGrid v-if="cardsGrid"/>
   </div>
 </template>
 

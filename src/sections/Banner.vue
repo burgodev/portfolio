@@ -10,7 +10,6 @@
 
           <v-row class="justify-center">
             <h2 style="     font-size: larger; "> FILIPE BURGONOVO</h2>
-
           </v-row>
         </v-col>
 
@@ -27,18 +26,18 @@
         </v-col>
       </v-row>
     </div>
-
     <div class="images"/>
+    <CuttedEdgeLeft/>
   </section>
 </template>
 
 <script>
   import {isMobile} from "mobile-device-detect";
-
+  import CuttedEdgeLeft from '../components/cuttedEdges/CuttedEdgeLeft';
 
   export default {
     name: "Banner.vue",
-    components: {},
+    components: {CuttedEdgeLeft},
 
     data: () => ({
       mobile: isMobile ? true : false,
@@ -51,8 +50,6 @@
       },
 
       typewriter() {
-
-
         let h1 = document.querySelector('h1');
         let h2 = document.querySelector('h2');
         let stringH1 = h1.innerHTML.split('');
@@ -68,20 +65,13 @@
         setTimeout(() => stringH2.forEach((letter, i) => {
           setTimeout(() => h2.innerHTML += letter, 115 * i);
         }), 1500);
-
-
       }
-
-
     },
 
     created() {
-
       setTimeout(() => this.typewriter(), 3200);
-
     }
-  }
-  ;
+  };
 </script>
 
 
@@ -203,17 +193,17 @@
   @keyframes imagesAnimation {
     10% {
       opacity: 1;
-
       transform: scale(1.4);
       background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)),
       url("/src/assets/banner01.jpg");
+
     }
 
     20% {
 
       transform: scale(1.35);
       background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)),
-      url("../../assets/banner02.jpg");
+      url("../assets/banner02.jpg");
     }
 
     30% {
@@ -221,28 +211,30 @@
       transform: scale(1.3);
 
       background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)),
-      url("../../assets/banner03.png");
+      url("../assets/banner03.png");
     }
 
     40% {
 
       transform: scale(1.25);
       background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)),
-      url("../../assets/banner04.jpg");
+      url("../assets/banner04.jpg");
+
+
     }
 
     50% {
       opacity: 0.6;
       transform: scale(1.2);
       background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5)),
-      url("../../assets/banner05.jpg");
+      url("../assets/banner05.jpg");
     }
 
     60% {
       opacity: 0.6;
       transform: scale(1.15);
       background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4)),
-      url("../../assets/banner06.jpg");
+      url("../assets/banner06.jpg");
     }
 
     70% {
@@ -285,7 +277,7 @@
 
       /*-webkit-transform: scale(0.95);*/
       background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
-      url("../../assets/banner04.jpg");
+      url("../assets/banner04.jpg");
 
     }
 
@@ -301,7 +293,7 @@
 
 
       background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
-      url("../../assets/banner04.jpg");
+      url("../assets/banner04.jpg");
     }
   }
 
@@ -319,223 +311,6 @@
 
   /* Até aqui */
 
-
-  .logo {
-    cursor: pointer;
-    text-align: center;
-  }
-
-  .logo:hover .restart {
-    opacity: .8;
-  }
-
-  .restart {
-    color: #fff;
-    margin-top: 20px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: -.08rem;
-    transition: opacity 150ms linear;
-  }
-
-
-  .wesy {
-    position: relative;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: -.2rem;
-    font-size: 5rem;
-    margin: .05rem .05rem .5rem;
-    padding: 0 0.4rem;
-    display: inline-block;
-    z-index: 10;
-    font-weight: 800;
-    -webkit-transform: translateX(95px);
-    transform: translateX(95px);
-  }
-
-
-  .lab {
-    position: absolute;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: -.2rem;
-    font-size: 5rem;
-    margin: .05rem .05rem .5rem;
-    padding: 0 0.4rem;
-    display: inline-block;
-    right: 35%;
-    top: 37%;
-    font-weight: 500;
-    letter-spacing: -.3rem;
-    animation: labAnimation 1200ms ease 3600ms forwards;
-  }
-
-
-  .wesy:before {
-    z-index: -10;
-    content: '';
-    display: block;
-    background-color: #000;
-    border: solid rgba(255, 255, 255, 0.2) 1px;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .studios:after, .studios:before {
-    content: '';
-    display: block;
-    height: 3px;
-    position: absolute;
-    background-color: #fff;
-    display: block;
-    left: 0.4rem;
-    right: 0.4rem;
-  }
-
-  .studios:before {
-    top: 0;
-  }
-
-  .studios:after {
-    bottom: 0;
-  }
-
-
-  .wrapper.run-animation.wesy {
-    -webkit-transform: translateX(95px);
-    transform: translateX(95px);
-    -webkit-animation: slide-out-X 750ms ease forwards;
-    animation: slide-out-X 750ms ease forwards;
-  }
-
-  .wrapper.run-animation .studios {
-    -webkit-transform: translateX(-95px);
-    transform: translateX(-95px);
-    color: transparent;
-    -webkit-animation: slide-out-X 750ms ease forwards,
-    show-text 300ms linear forwards 1500ms;
-    animation: slide-out-X 750ms ease forwards,
-    show-text 300ms linear forwards 1500ms;
-  }
-
-  .wrapper.run-animation .studios:before {
-    -webkit-transform: translateY(2.9rem);
-    transform: translateY(2.9rem);
-    -webkit-animation: slide-out-Y 300ms ease forwards 750ms;
-    animation: slide-out-Y 300ms ease forwards 750ms;
-  }
-
-  .wrapper.run-animation .studios:after {
-    -webkit-transform: translateY(-2.9rem);
-    transform: translateY(-2.9rem);
-    -webkit-animation: slide-out-Y 300ms ease forwards 750ms;
-    animation: slide-out-Y 300ms ease forwards 750ms;
-  }
-
-  .wrapper.run-animation .restart {
-    opacity: 0;
-    -webkit-animation: fade-down 1200ms ease 3600ms forwards;
-    animation: fade-down 1200ms ease 3600ms forwards;
-  }
-
-  /*
-  .wrapper.run-animation ~ .images {
-    animation: flicker-images 8s linear backwards;
-  } */
-
-
-  @-webkit-keyframes slide-out-X {
-    100% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes slide-out-X {
-    100% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-  }
-
-  @-webkit-keyframes slide-out-Y {
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes slide-out-Y {
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-  }
-
-  @-webkit-keyframes show-text {
-    100% {
-      color: #fff;
-    }
-  }
-
-  @keyframes show-text {
-    100% {
-      color: #fff;
-    }
-  }
-
-
-  @-webkit-keyframes tighten-vinette {
-    100% {
-      background-size: 120%;
-    }
-  }
-
-  @keyframes tighten-vinette {
-    100% {
-      background-size: 120%;
-    }
-  }
-
-  @-webkit-keyframes fade-down {
-    0% {
-      -webkit-transform: translateY(-2rem);
-      transform: translateY(-2rem);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      opacity: 0.5;
-    }
-  }
-
-  @keyframes fade-down {
-    0% {
-      -webkit-transform: translateY(-2rem);
-      transform: translateY(-2rem);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      opacity: 0.5;
-    }
-  }
-
-
-  @keyframes labAnimation {
-
-    100% {
-
-
-      transform: translateX(98%);
-    }
-  }
 
 
 </style>

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Banner from '../components/sections/Banner.vue'
+import Banner from '../sections/Banner.vue'
 
 Vue.use(VueRouter)
 
