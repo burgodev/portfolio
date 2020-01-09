@@ -40,7 +40,7 @@
     <v-row class="justify-end">
       <v-btn
         text
-        rounded
+
       >
         <v-icon>home</v-icon>
         <span class="ml-2">Home</span>
@@ -48,7 +48,7 @@
 
       <v-btn
         text
-        rounded
+
         @click="$vuetify.goTo('#tools', options)">
         <v-icon>build</v-icon>
         <span class="ml-2">Ferramentas</span>
@@ -57,7 +57,7 @@
 
       <v-btn
         text
-        rounded
+
         @click="$vuetify.goTo('#components', options)"
       >
         <v-icon>apps</v-icon>
@@ -65,12 +65,12 @@
       </v-btn>
 
       <v-btn
-        @click="$vuetify.goTo('#vision', options)"
+        @click="$vuetify.goTo('#mindset', options)"
         text
-        rounded
+
       >
         <v-icon>visibility</v-icon>
-        <span class="ml-2">Visão</span>
+        <span class="ml-2">Mindset</span>
       </v-btn>    </v-row>
 
   </v-app-bar>
@@ -84,7 +84,7 @@
       return {
         options: {
           duration: 750,
-          offset: -100,
+          offset: 335,
           easing: 'linear'
         }
       }

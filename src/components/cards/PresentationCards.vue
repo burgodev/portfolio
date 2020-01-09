@@ -1,9 +1,9 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="transparent">
     <!-- DESKTOP -->
 
 
-    <section class="white" v-if="!mobile">
+    <section class="transparent" v-if="!mobile">
       <div class="screen">
         <div class="content">
           <h2 style="color: #ffcc00;" class="mainFont">Javascript</h2>
@@ -113,33 +113,32 @@
   }
 
   section:hover .screen {
-    opacity: 0.2;
+    opacity: 0.4;
     background-color: black;
   }
 
   section .screen:hover {
-    flex-grow: 3;
+    flex-grow: 3.5;
     opacity: 1;
     border-radius: 20px;
+
   }
 
   section .screen:nth-child(1) {
-
-
     background: url("../../assets/jss.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    transform: rotateZ(5deg);
+    transform: rotateZ(5deg)  translateX(15px);
     transition: 2s;
-
     height: 400px;
     align-self: center;
     justify-self: center;
   }
 
   section .screen:nth-child(1):hover {
-    transform: rotateZ(0deg);
+    transform: rotateZ(0deg) ;
+
   }
 
   section .screen:nth-child(2) {
@@ -147,7 +146,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    transform: rotateZ(5deg);
+    transform: rotateZ(5deg) translateY(75px) translateX(50px);
     transition: 2s;
     height: 400px;
     align-self: center;
@@ -157,7 +156,8 @@
   }
 
   section .screen:nth-child(2):hover {
-    transform: rotateZ(0deg);
+    transform: rotateZ(0deg) translateY(75px);
+
 
 
   }
@@ -168,7 +168,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    transform: rotateZ(5deg);
+    transform: rotateZ(5deg) translateY(150px) translateX(50px);
     transition: 2s;
     height: 400px;
     align-self: center;
@@ -176,38 +176,9 @@
   }
 
   section .screen:nth-child(3):hover {
-    transform: rotateZ(0deg);
-  }
-
-  section .screen:nth-child(4) {
-    background: url("https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transform: rotateZ(5deg);
-    transition: 2s;
+    transform: rotateZ(0deg) translateY(150px);
 
   }
-
-  section .screen:nth-child(4):hover {
-    transform: rotateZ(0deg);
-  }
-
-  section .screen:nth-child(5) {
-    background: url("../../assets/vue.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transform: rotateZ(5deg);
-    transition: 2s;
-
-
-  }
-
-  section .screen:nth-child(5):hover {
-    transform: rotateZ(0deg);
-  }
-
 
 
   section .screen .content2 /*Mobile*/
@@ -225,7 +196,7 @@
   }
 
   section .screen:hover .content2 {
-    transform: translateX(90px);
+    transform: translateX(20px);
     transition-delay: 0.5s;
   }
 

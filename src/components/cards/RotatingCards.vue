@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="white align-center" >
+  <v-container fluid class="white align-center mt-5" >
       <section class="image-cards mt-3 mx-5 mx-auto" >
         <div class="image-cards__content">
           <a

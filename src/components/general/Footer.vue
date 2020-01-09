@@ -1,61 +1,132 @@
 <template>
-  <v-footer
-    dark
-    padless
-    color="rgb(245, 245, 245)"
+  <v-container class="translate-top-footer">
+    <v-row class="align-center title-padding  ">
+      <v-col cols="12" class="text-center">
+        <h1 style="font-size: -webkit-xxx-large;  font-family: Michroma;"> Contato</h1>
+      </v-col>
+    </v-row>
+    <v-row class="justify-center">
+      <v-card flat width="700" style="background-color: transparent">
+        <form>
+          <v-text-field
+            v-model="name"
+            :error-messages="nameErrors"
+            :counter="10"
+            label="Nome"
+            required
+            @input="$v.name.$touch()"
+            @blur="$v.name.$touch()"
+          ></v-text-field>
+          <v-text-field
+            v-model="email"
+            :error-messages="emailErrors"
+            label="E-mail"
+            required
+            @input="$v.email.$touch()"
+            @blur="$v.email.$touch()"
+          ></v-text-field>
+          <v-textarea
+            name="input-7-1"
+            label="Mensagem"
+            value=""
 
 
-    height="200px"
+          ></v-textarea>
+          <v-btn class="mr-4 primary" depressed @click="submit">Enviar</v-btn>
+          <v-btn @click="clear" depressed outlined>Limpar</v-btn>
+        </form>
+      </v-card>
+    </v-row>
 
-  >
-    <v-card
-      flat
-      tile
-      class="white--text text-center transparent"
-    >
+    <v-row class="justify-center " style="margin-top: 125px">
+      <v-icon large> home</v-icon>
+      <v-icon large> home</v-icon>
+      <v-icon large> home</v-icon>
+      <v-icon large> home</v-icon>
 
-
-
-
-    <!--  <v-card-text class="black--text pt-0">
-        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut
-        risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui.
-        Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices,
-        cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque
-        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      </v-card-text> -->
-
-      <v-divider></v-divider>
-
-    <!--  <v-card-text class="black--text">
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-      </v-card-text> -->
-    </v-card>
-  </v-footer>
-
-
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-  export default {
-    name: "Footer.vue",
+  import {validationMixin} from 'vuelidate'
+  import {required, maxLength, email} from 'vuelidate/lib/validators'
 
-    data: () => ({}),
+  export default {
+    name: 'Footer.vue',
+    mixins: [validationMixin],
+
+    validations: {
+      name: {required, maxLength: maxLength(10)},
+      email: {required, email},
+      select: {required},
+      checkbox: {
+        checked(val) {
+          return val
+        },
+      },
+    },
+
+    data: () => ({
+      name: '',
+      email: '',
+      select: null,
+      items: [
+        'Item 1',
+        'Item 2',
+        'Item 3',
+        'Item 4',
+      ],
+      checkbox: false,
+    }),
+
+    computed: {
+      checkboxErrors() {
+        const errors = []
+        if (!this.$v.checkbox.$dirty) return errors
+        !this.$v.checkbox.checked && errors.push('You must agree to continue!')
+        return errors
+      },
+      selectErrors() {
+        const errors = []
+        if (!this.$v.select.$dirty) return errors
+        !this.$v.select.required && errors.push('Item is required')
+        return errors
+      },
+      nameErrors() {
+        const errors = []
+        if (!this.$v.name.$dirty) return errors
+        !this.$v.name.maxLength && errors.push('Name must be at most 10 characters long')
+        !this.$v.name.required && errors.push('Name is required.')
+        return errors
+      },
+      emailErrors() {
+        const errors = []
+        if (!this.$v.email.$dirty) return errors
+        !this.$v.email.email && errors.push('Must be valid e-mail')
+        !this.$v.email.required && errors.push('E-mail is required')
+        return errors
+      },
+    },
+
+    methods: {
+      submit() {
+        this.$v.$touch()
+      },
+      clear() {
+        this.$v.$reset()
+        this.name = ''
+        this.email = ''
+        this.select = null
+        this.checkbox = false
+      },
+    },
   }
 </script>
 
 <style scoped>
 
-
-
-  .footerBack{
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4));
-    -webkit-background-size: cover;
-    background-size: cover;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    width: -webkit-fill-available;
-
-
+  .translate-top-footer {
+    transform: translateY(-750px);
   }
 </style>

@@ -1,13 +1,14 @@
 <template>
-  <v-app class="white margin-0 ">
+  <v-app class="white margin-0 " style="height: 100vh;">
     <Toolbar/>
-    <v-container fluid class="padding-0 white">
+    <v-container fluid class="padding-0 white" >
       <Banner id="banner"/>
       <Tools id="tools"/>
       <Components id="components"/>
-      <Vision id="vision"/>
-    </v-container>
+      <Vision id="mindset"/>
 
+    </v-container>
+    <Footer></Footer>
   </v-app>
 </template>
 
@@ -15,10 +16,10 @@
   import HelloWorld from './components/HelloWorld';
   import Banner from './sections/Banner';
   import Tools from './sections/Tools';
-  import Vision from './sections/Vision';
+  import Vision from './sections/Mindset';
   import CuttedEdgeRight from './components/cuttedEdges/CuttedEdgeRight';
   import CuttedEdgeLeft from './components/cuttedEdges/CuttedEdgeLeft';
-  import RotatingCards from './components/general/RotatingCards';
+  import RotatingCards from './components/cards/RotatingCards';
   import Components from './sections/Components';
   import Toolbar from './components/general/Toolbar';
   import Footer from './components/general/Footer';
@@ -38,8 +39,6 @@
       Footer,
       Vision,
       RotatingMenu,
-      CuttedEdgeRight,
-      CuttedEdgeLeft,
     },
 
     data: () => ({

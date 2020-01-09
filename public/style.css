@@ -50,7 +50,7 @@
     padding: 0px !important;
 }
 
-.titlePadding{
+.title-padding{
     padding-bottom: 50px;
 
 }
@@ -65,7 +65,7 @@
     width: -webkit-fill-available !important;
 }
 
-.translateTop{
+.translate-top{
     transform: translateY(-8vw) ;
 }
 
@@ -122,6 +122,10 @@
     opacity: 0;
     -webkit-animation: fade-in ease-in 2.5s 7s forwards;
     animation: fade-in ease-in 2.5s 7s forwards;
+}
+
+.translate-top-title{
+    transform: translateY(-395px);
 }
 
 /* KEYFRAMES */

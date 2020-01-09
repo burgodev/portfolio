@@ -1,11 +1,12 @@
 <template>
-  <v-container fluid class="padding-0  transparent"  >
-    <v-row class="align-center titlePadding">
+  <v-container fluid class="padding-0  transparent translate-top-vision"  >
+    <v-row class="align-center title-padding  ">
       <v-col cols="12" class="text-center">
         <h1 style="font-size: -webkit-xxx-large;  font-family: Michroma;"> Mindset</h1>
       </v-col>
     </v-row>
-    <v-row class="padding-bottom">
+
+    <v-row class="padding-bottom ">
       <v-col sm="6" md="6" lg="6" xl="6" cols="6">
         <v-img
           :src="require('../assets/burgo.jpg')"
@@ -61,31 +62,10 @@
   }
 </script>
 
-<style>
-  .visionBackground {
-    background-color: #121212;
-    content: "";
-    height: 100%;
-    left: -100%;
-    position: absolute;
-    top: 0;
-    transform: rotate(-25deg);
-    width: 300%;
+<style >
+  .translate-top-vision{
+    transform: translateY(-390px);
   }
 
 
-  .t-technology-tech::before {
-    background-color: #121212;
-    content: "";
-    height: 100%;
-    left: -100%;
-    position: absolute;
-    top: 0;
-    transform: rotate(-25deg);
-    width: 300%;
-  }
-
-  .translateTop2{
-    transform: translateY(-15vw)
-  }
 </style>

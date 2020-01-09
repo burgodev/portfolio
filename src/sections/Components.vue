@@ -1,12 +1,13 @@
 <template>
-  <v-container fluid class="white padding-0 translateTop ">
-    <v-row class="align-center ">
+  <v-container fluid class="transparent padding-0 ">
+    <CuttedEdgeRight />
+    <v-row class="align-center translate-top-title-components ">
       <v-col cols="12" class="text-center">
         <h1 style="font-size: -webkit-xxx-large;  font-family: Michroma;"> Biblioteca de Componentes</h1>
       </v-col>
     </v-row>
 
-    <v-row no-gutters>
+    <v-row no-gutters class="translate-top-components">
       <v-col cols="1" class="text-center">
         <v-menu bottom>
           <template v-slot:activator="{ on }">
@@ -32,8 +33,8 @@
       <v-spacer></v-spacer>
     </v-row>
 
-    <v-row class="paddingComponents">
-      <v-card flat min-height="100vh" class="width-fill">
+    <v-row class="paddingComponents translate-top-components">
+      <v-card flat height="85vh" class="width-fill transparent">
         <Confirmation v-if="confirmation" ref="Confirmation" class="paddingComponents"/>
         <Gallery v-if="gallery" class="paddingComponents"/>
         <CardsGrid v-if="cardsGrid" class="paddingComponents"/>
@@ -48,10 +49,11 @@
 <script>
   import Confirmation from "../components/dialogs/Confirmation";
   import Gallery from "../components/image/Gallery";
-  import CardsGrid from "../components/general/CardsGrid";
+  import CardsGrid from "../components/cards/CardsGrid";
   import DataTable from "../components/general/DataTable";
   import RotatingMenu from "../components/general/RotatingMenu";
   import CuttedEdgeLeft from "../components/cuttedEdges/CuttedEdgeLeft"
+  import CuttedEdgeRight from "../components/cuttedEdges/CuttedEdgeRight"
 
   export default {
     name: "Components",
@@ -61,7 +63,8 @@
       CardsGrid,
       DataTable,
       RotatingMenu,
-      CuttedEdgeLeft
+      CuttedEdgeLeft,
+      CuttedEdgeRight
     },
 
 
@@ -77,7 +80,7 @@
 
       confirmation: false,
       gallery: false,
-      cardsGrid: false,
+      cardsGrid: true,
       dataTable: false,
 
 
@@ -141,5 +144,13 @@
 
   .paddingComponents{
     padding-top: 75px;
+  }
+
+  .translate-top-components{
+    transform: translateY(-320px);
+  }
+
+  .translate-top-title-components{
+    transform: translateY(-405px);
   }
 </style>

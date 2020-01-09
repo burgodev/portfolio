@@ -1,28 +1,23 @@
 <template>
   <div>
     <section class="section">
-      <div class="content2">
+      <div class="content">
       </div>
-
     </section>
-
-
   </div>
 </template>
 
 <script>
-  import RotatingCards from '../general/RotatingCards'
+  import RotatingCards from '../cards/RotatingCards'
   export default {
     Components:{
       RotatingCards
     },
-    name: "About.vue"
+    name: "CuttedEdgeRight.vue"
   }
 </script>
 
 <style scoped>
-
-
   .section {
     position: inherit;
     top: 50%;
@@ -31,21 +26,13 @@
     display: flex;
   }
 
-  .content1 {
-    width: 50%;
-    height: 100%;
-    background: #000;
-    box-sizing: border-box;
-
-  }
-
-  .content2 {
+  .content {
     width: 50%;
     height: 100%;
     background: white;
     box-sizing: border-box;
     /*border-left: 220vh solid #cbe9ff;*/
-    border-left: 220vh solid black;
+    border-left: 220vh solid #f5f5f5;
     border-bottom: 400px solid transparent;
     background-position: -100px -150px;
 
