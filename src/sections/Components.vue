@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="transparent padding-0 ">
+  <section class="transparent padding-0 ">
     <CuttedEdgeRight />
     <v-row class="align-center translate-top-title-components ">
       <v-col cols="12" class="text-center">
@@ -43,7 +43,7 @@
     </v-row>
 
     <CuttedEdgeLeft/>
-  </v-container>
+  </section>
 </template>
 
 <script>

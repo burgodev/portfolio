@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="padding-0  transparent translate-top-vision"  >
+  <section class="padding-0  transparent translate-top-vision"  >
     <v-row class="align-center title-padding  ">
       <v-col cols="12" class="text-center">
         <h1 style="font-size: -webkit-xxx-large;  font-family: Michroma;"> Mindset</h1>
@@ -48,7 +48,7 @@
       </v-col>
     </v-row>
     <CuttedEdgeRight/>
-  </v-container>
+  </section>
 </template>
 
 <script>

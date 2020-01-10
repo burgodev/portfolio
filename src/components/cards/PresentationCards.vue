@@ -6,17 +6,17 @@
     <section class="transparent" v-if="!mobile">
       <div class="screen">
         <div class="content">
-          <h2 style="color: #ffcc00;" class="mainFont">Javascript</h2>
+          <h2 style="color: #ffcc00;" class="main-font">Javascript</h2>
         </div>
       </div>
       <div class="screen">
         <div class="content">
-          <h2 class="mainFont">HTML 5</h2>
+          <h2 class="main-font">HTML 5</h2>
         </div>
       </div>
       <div class="screen">
         <div class="content">
-          <h2 style="color: #71b2de" class="mainFont">CSS 3</h2>
+          <h2 style="color: #71b2de" class="main-font">CSS 3</h2>
         </div>
       </div>
     </section>

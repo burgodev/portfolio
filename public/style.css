@@ -37,7 +37,7 @@
 }
 
 /* FONT */
-.mainFont{
+.main-font{
     font-family: Michroma;
 }
 
@@ -107,6 +107,7 @@
 
 .text-center {
     text-align: center;
+    text-align: -webkit-center;
 }
 
 .height-100 {

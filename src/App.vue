@@ -5,9 +5,12 @@
       <Banner id="banner"/>
       <Tools id="tools"/>
       <Components id="components"/>
-      <Vision id="mindset"/>
-
+      <Mindset id="mindset"/>
+      <Contact id="contact"></Contact>
     </v-container>
+    <!-- Footer -->
+
+
     <Footer></Footer>
   </v-app>
 </template>
@@ -16,29 +19,28 @@
   import HelloWorld from './components/HelloWorld';
   import Banner from './sections/Banner';
   import Tools from './sections/Tools';
-  import Vision from './sections/Mindset';
-  import CuttedEdgeRight from './components/cuttedEdges/CuttedEdgeRight';
-  import CuttedEdgeLeft from './components/cuttedEdges/CuttedEdgeLeft';
+  import Mindset from './sections/Mindset';
   import RotatingCards from './components/cards/RotatingCards';
   import Components from './sections/Components';
   import Toolbar from './components/general/Toolbar';
   import Footer from './components/general/Footer';
+  import Contact from './sections/Contact';
   import RotatingMenu from './components/general/RotatingMenu';
 
 
   export default {
     name: 'App',
     components: {
-      Footer,
+      Contact,
       Components,
       HelloWorld,
       Banner,
       Toolbar,
       Tools,
       RotatingCards,
-      Footer,
-      Vision,
+       Mindset,
       RotatingMenu,
+      Footer
     },
 
     data: () => ({
