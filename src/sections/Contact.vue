@@ -28,8 +28,6 @@
             name="input-7-1"
             label="Mensagem"
             value=""
-
-
           ></v-textarea>
           <v-row class="justify-center">
             <v-btn class="mr-4 primary" depressed @click="submit">Enviar</v-btn>
@@ -122,7 +120,6 @@
       nameErrors() {
         const errors = []
         if (!this.$v.name.$dirty) return errors
-
         !this.$v.name.required && errors.push('Digite o nome')
         return errors
       },
@@ -151,7 +148,6 @@
 </script>
 
 <style scoped>
-
   .translate-top-footer {
     transform: translateY(-780px);
     height: 0px;

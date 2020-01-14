@@ -96,6 +96,8 @@
 }
 
 
+
+
 /* TEXT ALIGN */
 .text-right {
     text-align: right;
@@ -108,6 +110,10 @@
 .text-center {
     text-align: center;
     text-align: -webkit-center;
+}
+
+.text--uppercase{
+    text-transform: uppercase;
 }
 
 .height-100 {
