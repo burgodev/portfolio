@@ -2,21 +2,21 @@
   <section style="    background-color: #ecece280;">
     <v-row style=" align-items: center;">
       <v-spacer/>
-      <v-col cols="6">
+      <v-col cols="6" class="grow-and-rotate">
         <v-row
-
+          class="rotate-col"
           style="justify-content: center; border: solid; border-color: #83785c; transform: rotate(-5deg) translateY(25px)  scaleY(1.1) scaleX(1.1);  ">
           <v-col cols="12" >
             <h3 style="font-family: 'Poiret One', cursive;  font-weight: 200;  text-align: center; transform: rotate(5deg);  margin-top: 20px; "> Welcome
               to</h3>
             <h1 class="text--uppercase;  "
-                style="font-family: 'Fredericka the Great', serif;     font-weight: lighter; text-align: center; font-size: 5rem; color: #83785c; ">
+                style="font-family: 'Fredericka the Great', serif; font-weight: lighter; text-align: center; font-size: 5rem; color: #83785c; ">
               Kaizo
             </h1>
           </v-col>
 
           <v-col cols="8" style="text-align: center; " >
-            <p style="font-family: 'Poiret One', cursive;     font-weight: bold; text-align: justify; transform: rotate(5deg); ">
+            <p class="rotate-p" style="font-family: 'Poiret One', cursive;     font-weight: bold; text-align: justify; transform: rotate(5deg); ">
               A ciência foca na descoberta da verdade.
               O empreendedorismo foca na obtenção do lucro.
               São dois Universos diferentes.
@@ -30,16 +30,11 @@
 
             <v-btn  class="show-button-animation" style="margin-bottom: 7px;" color="#83785c" outlined> Quero me inscrever!</v-btn>
           </v-col>
-
-
         </v-row>
 
       </v-col>
       <v-col cols="6" class="padding-0" style="height: 100vh;">
         <v-img :src="require('../assets/KaisoHome4.jpg')" height="100%" width="100%"/>
-
-
-
       </v-col>
     </v-row>
 
@@ -109,20 +104,38 @@
     animation: fade-in ease-in 2.5s 18s forwards;
   }
 
-  .grow:hover {
-    animation: grow 1s forwards;
+  .grow-and-rotate {
+    transition: 1s;
   }
 
+  .grow-and-rotate:hover {
+    transform: scale(1.1);
+  }
 
-  @keyframes grow {
-    0% {
+  .rotate-col {
+    transition: 1s;
+  }
 
-    }
+  .grow-and-rotate:hover .rotate-col {
+    transform: rotateZ(0deg) !important;
+    background-color: white;
 
-    100% {
-      transform: scale(1.1);
+  }
 
-    }
+  .rotate-p {
+    transition: 1s;
+  }
+
+  .grow-and-rotate:hover .rotate-p {
+    transform: rotateZ(0deg) !important;
+  }
+
+  h3 {
+    transition: 1s;
+  }
+
+  .grow-and-rotate:hover h3 {
+    transform: rotateZ(0deg) !important;
   }
 
 </style>
