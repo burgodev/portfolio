@@ -4,8 +4,9 @@
       <v-spacer/>
       <v-col cols="6">
         <v-row
+
           style="justify-content: center; border: solid; border-color: #83785c; transform: rotate(-5deg) translateY(25px)  scaleY(1.1) scaleX(1.1);  ">
-          <v-col cols="12">
+          <v-col cols="12" >
             <h3 style="font-family: 'Poiret One', cursive;  font-weight: 200;  text-align: center; transform: rotate(5deg);  margin-top: 20px; "> Welcome
               to</h3>
             <h1 class="text--uppercase;  "
@@ -14,7 +15,7 @@
             </h1>
           </v-col>
 
-          <v-col cols="8" style="text-align: center;">
+          <v-col cols="8" style="text-align: center; " >
             <p style="font-family: 'Poiret One', cursive;     font-weight: bold; text-align: justify; transform: rotate(5deg); ">
               A ciência foca na descoberta da verdade.
               O empreendedorismo foca na obtenção do lucro.
@@ -27,7 +28,7 @@
             </p>
 
 
-            <v-btn class="show-button-animation" style="margin-bottom: 7px;" color="#83785c" outlined> Quero me inscrever!</v-btn>
+            <v-btn  class="show-button-animation" style="margin-bottom: 7px;" color="#83785c" outlined> Quero me inscrever!</v-btn>
           </v-col>
 
 
@@ -107,4 +108,21 @@
     -webkit-animation: fade-in ease-in 2.5s 18s forwards;
     animation: fade-in ease-in 2.5s 18s forwards;
   }
+
+  .grow:hover {
+    animation: grow 1s forwards;
+  }
+
+
+  @keyframes grow {
+    0% {
+
+    }
+
+    100% {
+      transform: scale(1.1);
+
+    }
+  }
+
 </style>
