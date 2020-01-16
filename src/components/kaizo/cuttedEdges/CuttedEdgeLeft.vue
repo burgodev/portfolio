@@ -24,6 +24,8 @@
     left: 50%;
     background: #6a6a6a;
     display: flex;
+    transform: translateY(-25px)
+
   }
 
   .content {
@@ -32,6 +34,6 @@
     box-sizing: border-box;
     border-right: 220vh solid #f5f5f5;
     border-bottom: 400px solid transparent;
-    background: white -100px -150px;
+    background:  #81755b;
   }
 </style>

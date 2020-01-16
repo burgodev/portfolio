@@ -87,7 +87,7 @@
 
 </script>
 
-<style scoped>
+<style>
 
 
   p::after {

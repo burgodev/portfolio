@@ -155,7 +155,7 @@
   }
 </script>
 
-<style scoped>
+<style >
   .grow {
     transition: 1s;
   }
@@ -179,7 +179,6 @@
   .grow-and-rotate:hover .rotate-col {
     transform: rotateZ(0deg) !important;
     background-color: white;
-
   }
 
   .rotate-p {

@@ -18,7 +18,7 @@
     position: inherit;
     top: 50%;
     left: 50%;
-    background: white;
+    background: #6a6a6a;
     display: flex;
     transform: translateY(-100px)
   }
