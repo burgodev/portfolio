@@ -23,7 +23,7 @@
               </v-col>
               <v-col cols="12" class="rotate-p" style="transform: rotate(5deg);">
                 <p
-                  style="font-family: 'Poiret One', cursive;  font-weight: bold; margin-bottom: 35px;     text-align: justify;">
+                  style="font-family: 'Poiret One', cursive;  font-weight: bold; margin-bottom: 35px;  text-align: justify;">
                   Sou Felipe
                   Gruetzmacher, formado em gestão ambiental, educador ambiental e percebo a distância entre a
                   teoria das Universidades e a prática do mundo empresarial.
@@ -40,14 +40,14 @@
         <v-spacer/>
 
         <v-col cols="6">
-          <v-img :src="require('../assets/KaisoHome3.jpg')" height="70%" width="80%"
+          <v-img :src="require('../../assets/KaisoHome3.jpg')" height="70%" width="80%"
                  style="transform: translateY(30px) translateX(120px) translateX(50px) rotate(5deg);"
                  gradient="to right top, rgba(129, 117, 91, 0.6), rgba(126, 116, 91, 0.6)">
           </v-img>
         </v-col>
 
         <v-col cols="6">
-          <v-img :src="require('../assets/KaisoHome5.png')" height="80%" width="90%"
+          <v-img :src="require('../../assets/KaisoHome5.png')" height="80%" width="90%"
                  style="transform: translateY(60px) rotate(-5deg);"
                  gradient="to right top, rgba(129, 117, 91, 0.6), rgba(126, 116, 91, 0.6)">
           </v-img>

@@ -34,7 +34,7 @@
 
       </v-col>
       <v-col cols="6" class="padding-0" style="height: 100vh;">
-        <v-img :src="require('../assets/KaisoHome4.jpg')" height="100%" width="100%"/>
+        <v-img :src="require('../../assets/KaisoHome4.jpg')" height="100%" width="100%"/>
       </v-col>
     </v-row>
 

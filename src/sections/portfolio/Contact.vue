@@ -60,7 +60,7 @@
       <v-col cols="1" class="align-icon">
         <a target="_blank"
            href="https://github.com">
-          <v-img height="65" width="95" class="ml-3" :src="require('../assets/github.jpg')"/>
+          <v-img height="65" width="95" class="ml-3" :src="require('../../assets/github.jpg')"/>
         </a>
       </v-col>
       <v-spacer/>
@@ -73,7 +73,7 @@
         <a target="_blank"
            href="https://linkedin.com">
           <v-img height="30" width="150" class="ml-2"
-                 :src="require('../assets/linkedin.jpg')"/>
+                 :src="require('../../assets/linkedin.jpg')"/>
         </a>
       </v-col>
       <v-spacer/>

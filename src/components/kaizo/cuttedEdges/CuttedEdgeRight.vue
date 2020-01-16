@@ -1,18 +1,14 @@
 <template>
-  <div>
-    <section class="section">
-      <div class="content">
-      </div>
-    </section>
-  </div>
+  <section class="section">
+    <div class="content">
+    </div>
+  </section>
 </template>
 
 <script>
 
   export default {
-    Components:{
-
-    },
+    Components: {},
     name: "CuttedEdgeRight.vue"
   }
 </script>
@@ -24,12 +20,13 @@
     left: 50%;
     background: white;
     display: flex;
+    transform: translateY(-100px)
   }
 
   .content {
     width: 50%;
     height: 100%;
-    background: white;
+    background: #81755b;
     box-sizing: border-box;
     /*border-left: 220vh solid #cbe9ff;*/
     border-left: 220vh solid #f5f5f5;

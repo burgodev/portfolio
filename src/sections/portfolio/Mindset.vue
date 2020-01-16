@@ -9,7 +9,7 @@
     <v-row class="padding-bottom ">
       <v-col sm="6" md="6" lg="6" xl="6" cols="6">
         <v-img
-          :src="require('../assets/burgo.jpg')"
+          :src="require('../../assets/burgo.jpg')"
           height="100vh"
           contain
         />
@@ -52,7 +52,7 @@
 </template>
 
 <script>
-  import CuttedEdgeRight from '../components/cuttedEdges/CuttedEdgeRight'
+  import CuttedEdgeRight from '../../components/cuttedEdges/CuttedEdgeRight'
 
   export default {
     components: {

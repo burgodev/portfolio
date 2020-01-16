@@ -33,7 +33,7 @@
 
 <script>
   import {isMobile} from "mobile-device-detect";
-  import CuttedEdgeLeft from '../components/cuttedEdges/CuttedEdgeLeft';
+  import CuttedEdgeLeft from '../../components/cuttedEdges/CuttedEdgeLeft';
 
   export default {
     name: "Banner.vue",
@@ -203,7 +203,7 @@
 
       transform: scale(1.35);
       background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)),
-      url("../assets/banner02.jpg");
+      url("../../assets/banner02.jpg");
     }
 
     30% {
@@ -211,14 +211,14 @@
       transform: scale(1.3);
 
       background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)),
-      url("../assets/banner03.png");
+      url("../../assets/banner03.png");
     }
 
     40% {
 
       transform: scale(1.25);
       background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)),
-      url("../assets/banner04.jpg");
+      url("../../assets/banner04.jpg");
 
 
     }
@@ -227,14 +227,14 @@
       opacity: 0.6;
       transform: scale(1.2);
       background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5)),
-      url("../assets/banner05.jpg");
+      url("../../assets/banner05.jpg");
     }
 
     60% {
       opacity: 0.6;
       transform: scale(1.15);
       background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4)),
-      url("../assets/banner06.jpg");
+      url("../../assets/banner06.jpg");
     }
 
     70% {
@@ -277,7 +277,7 @@
 
       /*-webkit-transform: scale(0.95);*/
       background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
-      url("../assets/banner04.jpg");
+      url("../../assets/banner04.jpg");
 
     }
 
@@ -293,7 +293,7 @@
 
 
       background-image: linear-gradient(to right bottom, rgba(243, 232, 194, 0.6), rgba(0, 0, 0, .9)),
-      url("../assets/banner04.jpg");
+      url("../../assets/banner04.jpg");
     }
   }
 

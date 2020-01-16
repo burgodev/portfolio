@@ -47,13 +47,13 @@
 </template>
 
 <script>
-  import Confirmation from "../components/dialogs/Confirmation";
-  import Gallery from "../components/image/Gallery";
-  import CardsGrid from "../components/cards/CardsGrid";
-  import DataTable from "../components/general/DataTable";
-  import RotatingMenu from "../components/general/RotatingMenu";
-  import CuttedEdgeLeft from "../components/cuttedEdges/CuttedEdgeLeft"
-  import CuttedEdgeRight from "../components/cuttedEdges/CuttedEdgeRight"
+  import Confirmation from "../../components/dialogs/Confirmation";
+  import Gallery from "../../components/image/Gallery";
+  import CardsGrid from "../../components/cards/CardsGrid";
+  import DataTable from "../../components/general/DataTable";
+  import RotatingMenu from "../../components/general/RotatingMenu";
+  import CuttedEdgeLeft from "../../components/cuttedEdges/CuttedEdgeLeft"
+  import CuttedEdgeRight from "../../components/cuttedEdges/CuttedEdgeRight"
 
   export default {
     name: "Components",

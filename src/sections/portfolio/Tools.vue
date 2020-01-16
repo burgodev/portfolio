@@ -10,9 +10,9 @@
 
 <script>
   import {isMobile} from "mobile-device-detect";
-  import PresentationCards from '../components/cards/PresentationCards';
-  import RotatingCards from '../components/cards/RotatingCards';
-  import CuttedEdgeRight from '../components/cuttedEdges/CuttedEdgeRight';
+  import PresentationCards from '../../components/cards/PresentationCards';
+  import RotatingCards from '../../components/cards/RotatingCards';
+  import CuttedEdgeRight from '../../components/cuttedEdges/CuttedEdgeRight';
 
 
   export default {
