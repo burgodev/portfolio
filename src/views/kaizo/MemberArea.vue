@@ -9,12 +9,7 @@
 
         </v-col>
         <v-col cols="6" class="padding-0">
-          <v-text-field rounded outlined label="Digite um mês"></v-text-field>
-
-          <v-row class="justify-center">
-            <v-checkbox label="Título" class="mx-2"></v-checkbox>
-            <v-checkbox label="Data" class="mx-2"></v-checkbox>
-          </v-row>
+          <v-select rounded outlined label="Selecione um mês"></v-select>
         </v-col>
       </v-row>
 
