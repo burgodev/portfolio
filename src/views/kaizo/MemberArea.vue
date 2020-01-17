@@ -1,13 +1,32 @@
 <template>
   <section>
     <v-container>
+      <v-row class="justify-center" style="padding-bottom: 50px;">
+        <v-col cols="12" class="align-center" style="padding-bottom: 50px;">
+          <h1 class="main-font text--uppercase" style="text-align: -webkit-center; font-size: 2.5rem;">
+            Área de Membros
+          </h1>
+
+        </v-col>
+        <v-col cols="6" class="padding-0">
+          <v-text-field rounded outlined label="Digite um mês"></v-text-field>
+
+          <v-row class="justify-center">
+            <v-checkbox label="Título" class="mx-2"></v-checkbox>
+            <v-checkbox label="Data" class="mx-2"></v-checkbox>
+          </v-row>
+        </v-col>
+      </v-row>
+
+
       <v-row style="justify-content: space-around;">
-        <v-col class="card mt-5 grow-and-rotate-mb" style="margin-bottom: 100px " cols="5" v-for="card in cards" v-bind:key="card.id">
-          <v-card flat  style="border: solid; color: #83785c;">
+        <v-col class="card mt-5 grow-and-rotate-mb" style="margin-bottom: 100px " cols="5" v-for="card in cards"
+               v-bind:key="card.id">
+          <v-card flat style="border: solid; color: #83785c; border-radius: 50px;">
             <v-card-title class="justify-center">
-              <h4>
+              <h1>
                 {{card.title}}
-              </h4>
+              </h1>
             </v-card-title>
 
             <v-card-text>
@@ -15,7 +34,7 @@
             </v-card-text>
             <v-card-text>
               <p>
-                {{card.text.substr(0, 210)}} <span>...</span>
+                {{card.text.substr(0, 250)}} <span>...</span>
               </p>
             </v-card-text>
           </v-card>
@@ -111,17 +130,18 @@
 </script>
 
 <style scoped>
-  .grow-and-rotate-mb:nth-child(n){
+  .grow-and-rotate-mb:nth-child(n) {
     transition: 1s;
-    transform: rotateZ(5deg);
+    transform: rotateZ(5deg) scale(.95);
+
   }
 
-  .grow-and-rotate-mb:nth-child(n):hover{
+  .grow-and-rotate-mb:nth-child(n):hover {
     transition: 1s;
     transform: rotateZ(0deg) scale(1.2, 1.2);
   }
 
-  .card{
+  .card {
     transform: translateY(0px) rotateZ(15deg);
     transition: 1s;
     cursor: pointer;
