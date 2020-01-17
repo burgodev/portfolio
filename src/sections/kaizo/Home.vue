@@ -1,5 +1,5 @@
 <template>
-  <section style="    background-color: #ecece280;">
+  <section style="background-color: #ecece280;">
     <v-row style=" align-items: center;">
       <v-spacer/>
       <v-col cols="6" class="grow-and-rotate">
@@ -87,7 +87,7 @@
 
 </script>
 
-<style>
+<style scoped>
 
 
   p::after {

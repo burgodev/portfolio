@@ -1,7 +1,7 @@
 <template>
   <v-app class="white margin-0 " style="height: 100vh;">
     <ToolbarKaizo/>
-    <v-container fluid class="padding-0 white">
+    <v-container fluid class=" white" style="background-color: rgb(245, 245, 240) !important; padding-top: 100px; padding-bottom: 100px;">
 
       <!-- KAIZO -->
       <KaizoLandingPage/>

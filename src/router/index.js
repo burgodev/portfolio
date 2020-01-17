@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Banner from '../sections/portfolio/Banner.vue'
+import MemberArea from '../views/kaizo/MemberArea'
+
 
 Vue.use(VueRouter)
 
@@ -10,6 +12,12 @@ const routes = [
     path: '/',
     name: 'Banner',
     component: Banner
+  },
+
+  {
+    path: '/MemberArea',
+    name: 'MemberArea',
+    component: MemberArea
   },
 
 ]

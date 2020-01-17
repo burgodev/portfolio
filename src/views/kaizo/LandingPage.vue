@@ -1,17 +1,19 @@
 <template>
   <div style="background-color: rgb(245, 245, 240)">
-    <KaizoHome/>
+
+    <MemberArea/>
+    <!--<KaizoHome/>
 
     <KaizoAbout/>
     <CuttedEdgeRight/>
     <ValueOffer/>
-
     <Contact/>
-    <Footer/>
+    <Footer/> -->
   </div>
 </template>
 
 <script>
+  import MemberArea from '../../views/kaizo/MemberArea'
   import KaizoHome from '../../sections/kaizo/Home'
   import KaizoAbout from '../../sections/kaizo/About'
   import ValueOffer from '../../sections/kaizo/ValueOffer'
@@ -29,7 +31,8 @@
       Contact,
       CuttedEdgeRight,
       CuttedEdgeLeft,
-      Footer
+      Footer,
+      MemberArea
 
     }
   }
