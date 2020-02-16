@@ -3,7 +3,7 @@
     <vue-particles
       color="#dedede"
       :particleOpacity="0.3"
-      :particlesNumber="100"
+      :particlesNumber="70"
       shapeType="circle"
       :particleSize="2"
       linesColor="#dedede"
@@ -157,7 +157,7 @@
       rotate3: false,
       rotate4: false,
       i: 1,
-      strength: 50,
+      strength: 20,
       duration: 1500,
       turnBlack: false,
     }),
