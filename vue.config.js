@@ -1,5 +1,16 @@
 module.exports = {
+
+
+
+
   "transpileDependencies": [
     "vuetify"
-  ]
+  ],
+
+
 }
+
+
+
+
+

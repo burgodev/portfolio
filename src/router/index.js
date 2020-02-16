@@ -1,23 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
-import Banner from '../sections/portfolio/Banner.vue'
-import MemberArea from '../views/kaizo/MemberArea'
+import Portfolio from '../views/portfolio/LandingPage.vue'
+import Intro from '../views/portfolio/Intro'
+import Teste from '../views/portfolio/Teste'
 
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Banner',
-    component: Banner
+    path: '/portfolio',
+    name: 'Portfolio',
+    component: Portfolio
   },
 
   {
-    path: '/MemberArea',
-    name: 'MemberArea',
-    component: MemberArea
+    path: '/teste',
+    name: 'Teste',
+    component: Teste
+  },
+
+  {
+    path: '/',
+    name: 'Intro',
+    component: Intro
   },
 
 ]

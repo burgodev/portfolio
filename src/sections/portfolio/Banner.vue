@@ -1,5 +1,5 @@
 <template>
-  <section class="banner black">
+  <section class="banner black padding-0">
     <div class="wrapper run-animation">
       <v-row class="title-animation">
         <v-col cols="12" style="padding: 12.5rem;">

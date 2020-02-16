@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="transparent">
+  <v-container fluid class="transparent" style="height: 100vh;">
     <!-- DESKTOP -->
 
 

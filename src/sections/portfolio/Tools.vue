@@ -1,5 +1,5 @@
 <template>
-  <section fluid class="transparent " style="    height: 190vh" >
+  <section fluid class="transparent "  >
     <v-col cols="12" class="text-center translate-top-title " >
       <h1 style="font-size: -webkit-xxx-large;" class="main-font"> Ferramentas</h1>
     </v-col>
