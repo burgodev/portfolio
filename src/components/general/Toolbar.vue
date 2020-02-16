@@ -2,6 +2,7 @@
   <v-app-bar
     app
     class="transparent toolbar-animation"
+    style="z-index: 999;"
     dark
     flat
     absolute

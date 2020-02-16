@@ -13,6 +13,11 @@
     font-style: italic;
 }
 
+.full-viewport{
+    height: 100vh;
+    width: 100vw;
+}
+
 .confirmation-btn {
     border-color: black;
     background-color: transparent;

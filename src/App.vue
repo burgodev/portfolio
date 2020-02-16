@@ -1,12 +1,11 @@
 <template>
-  <v-app class="white margin-0 " style="height: 100vh;">
-    <Toolbar v-if="$route.path === '/portfolio'" />
-    <v-content  class=" white padding-0 ">
+  <v-app class="margin-0 " style="height: 100vh;">
+    <Toolbar v-if="$route.path === '/home'"/>
+
+    <v-content class=" padding-0 ">
       <router-view/>
-
-
-
     </v-content>
+
   </v-app>
 </template>
 
@@ -35,48 +34,54 @@
 
     },
 
-    mounted(){
-     /* const cursor = document.querySelector('.cursor')
+    mounted() {
 
-      console.log('cursor', cursor)
+      if (this.$route.path === '/') {
+        this.$router.replace('/intro');
+      }
 
-      document.addEventListener('mousemove', e =>{
+      /* const cursor = document.querySelector('.cursor')
 
-        console.log(e.pageY, e.pageX)
+       console.log('cursor', cursor)
+
+       document.addEventListener('mousemove', e =>{
+
+         console.log(e.pageY, e.pageX)
 
 
 
-        cursor.setAttribute("style", "top:" + (e.pageY - 10) +"px; left:"+(e.pageX-10)+'px;' )
-        console.log('cursor', cursor)
-      })
+         cursor.setAttribute("style", "top:" + (e.pageY - 10) +"px; left:"+(e.pageX-10)+'px;' )
+         console.log('cursor', cursor)
+       })
 
-      document.addEventListener('click', () => {
-        console.log('cliquei')
-        cursor.classList.add("expand")
+       document.addEventListener('click', () => {
+         console.log('cliquei')
+         cursor.classList.add("expand")
 
-        setTimeout(() => {
-          console.log('expandiu remove')
-          cursor.classList.remove("expand")
-        }, 500)
+         setTimeout(() => {
+           console.log('expandiu remove')
+           cursor.classList.remove("expand")
+         }, 500)
 
-      })*/
+       })*/
     }
+
 
   };
 </script>
 
 <style scoped lang="scss">
-  body{
+  body {
     margin: 0;
     height: 100vh;
 
     background: rgb(34, 34, 34);
   }
 
-  .cursor{
+  .cursor {
     width: 20px;
     height: 20px;
-    border:1px solid white;
+    border: 1px solid white;
     border-radius: 50%;
     position: absolute;
     transition-duration: 100ms;
@@ -84,7 +89,7 @@
     animation: cursorAnim .5s infinite alternate;
   }
 
-  .cursor::after{
+  .cursor::after {
     content: "";
     width: 20px;
     height: 20px;
@@ -97,38 +102,38 @@
     animation: cursorAnim2 .5s infinite alternate;
   }
 
-  .expand{
+  .expand {
     animation: cursorAnim3 .5s forwards;
     border: 1px solid red;
   }
 
-  @keyframes cursorAnim{
-    from{
+  @keyframes cursorAnim {
+    from {
       transform: scale(1);
     }
-    to{
+    to {
       transform: scale(.7)
     }
   }
 
-  @keyframes cursorAnim2{
-    from{
+  @keyframes cursorAnim2 {
+    from {
       transform: scale(1);
     }
-    to{
+    to {
       transform: scale(.4)
     }
   }
 
-  @keyframes cursorAnim3{
-    0%{
+  @keyframes cursorAnim3 {
+    0% {
       transform: scale(1);
     }
-    50%{
+    50% {
       transform: scale(3);
     }
 
-    100%{
+    100% {
       transform: scale(1);
       opacity: 0;
     }
@@ -146,6 +151,12 @@
 
   .transformCenter {
     transform: translateX(38px);
+  }
+
+
+  .theme--light.v-application[data-v-7ba5bd90] {
+    background: transparent !important;
+    color: rgba(0, 0, 0, 0.87);
   }
 
 

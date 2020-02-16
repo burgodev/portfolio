@@ -36,9 +36,9 @@
 
 
      </vue-particles>
-   <!--  <h1  class="pointer" style="z-index: 99; color: white"> INICIALIZAR </h1> -->
+     <h1  class="pointer" style="z-index: 99; color: white"> INICIALIZAR </h1>
 
-   <rotating-cards style="z-index: 99; "/>
+
 
 
    </div>
@@ -207,25 +207,6 @@
     clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
   }
 
-  h1::before,
-  h1::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  h1::before {
-    animation: crack1 2.5s linear forwards;
-    -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
-  }
-
-  h1::after {
-    animation: crack2 2.5s linear forwards;
-    -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
-    clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
-  }
 
   @keyframes shake {
     5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
@@ -254,6 +235,27 @@
     }
   }
 
+  /* h1::before,
+   h1::after {
+     content: attr(data-text);
+     position: absolute;
+     top: 0;
+     left: 0;
+   }
+
+   h1::before {
+     animation: crack1 2.5s linear forwards;
+     -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+     clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+   }
+
+   h1::after {
+     animation: crack2 2.5s linear forwards;
+     -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+     clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+   }
+
+
   @keyframes crack1 {
     0%, 95% {
       transform: translate(-50%, -50%);
@@ -275,15 +277,7 @@
   }
 
 
+*/
 
 
-  a {
-
-
-    font-family: 'Michroma', sans-serif;
-    color: white !important;
-    font-size: 50px;
-
-
-  }
 </style>

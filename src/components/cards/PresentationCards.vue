@@ -1,9 +1,9 @@
 <template>
-  <v-container fluid class="transparent" style="height: 100vh;">
+  <v-container fluid class="white" style="height: 100vh;">
     <!-- DESKTOP -->
 
 
-    <section class="transparent" v-if="!mobile">
+    <section class="transparent" style="z-index: 99" v-if="!mobile">
       <div class="screen">
         <div class="content">
           <h2 style="color: #ffcc00;" class="main-font">Javascript</h2>

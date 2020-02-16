@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="transparent align-center mt-5"  style="height: 100vh;">
-      <section class="image-cards mt-3 mx-5 mx-auto" >
+      <section class="image-cards mt-3 mx-5 mx-auto" style="z-index: 99" >
         <div class="image-cards__content">
           <a
             target="_blank"

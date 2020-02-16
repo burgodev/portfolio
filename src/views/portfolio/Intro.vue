@@ -1,89 +1,76 @@
 <template>
-
-   <div class="wrap-banner">
-
-
+  <div class="wrap-banner">
     <vue-particles
-       color="#7aafff"
-       :particleOpacity="0.7"
-       :particlesNumber="125"
-       shapeType="circle"
-       :particleSize="4"
-       linesColor="#dedede"
-       :linesWidth="1"
-       :lineLinked="true"
-       :lineOpacity="0.4"
-       :linesDistance="150"
-       :moveSpeed="3"
-       :hoverEffect="true"
-       hoverMode="grab"
-       :clickEffect="true"
-       clickMode="push"
-       style="z-index: 1;"
-       class="particles"
-     >
+      color="#dedede"
+      :particleOpacity="0.3"
+      :particlesNumber="100"
+      shapeType="circle"
+      :particleSize="2"
+      linesColor="#dedede"
+      :linesWidth="1"
+      :lineLinked="true"
+      :lineOpacity="0.3"
+      :linesDistance="200"
+      :moveSpeed="3"
+      :hoverEffect="true"
+      hoverMode="grab"
+      :clickEffect="true"
+      clickMode="push"
+      style="z-index: 1;"
+      class="particles"
+
+    >
+
+    </vue-particles>
+    <section class="back " style=" overflow: hidden; z-index: 99;">
+      <kinesis-container v-bind:class="{blackout: turnBlack}" :duration="duration">
+        <kinesis-element type="depth"
+                         :strength="strength">
+          <video-background
+            ref="video"
+            :loop="loop"
+            :autoplay="autoplay"
+            :muted="muted"
+            :src="require('../../assets/Video Intro.mp4')"
+            @ended="videoEnded()"
+            class="video-size"
+          >
+
+            <v-row class="justify-center intro-row " v-bind:class="{clear: clear}">
+              <v-col cols="3" class="  rotate-90 col1" style="height: 100vh;"
+                     v-bind:class="{ rotate1: rotate1 }"></v-col>
+              <v-col cols="3" class="  rotate-90 col2 " style="background-position-x: 30%"
+                     v-bind:class="{ rotate2: rotate2 }">
 
 
-     </vue-particles>
+              </v-col>
+              <v-col cols="3" class=" rotate-90 col3" style="background-position-x: 60%"
+                     v-bind:class="{ rotate3: rotate3 }">
+
+
+              </v-col>
+              <v-col cols="3" class=" rotate-90 col4" style="background-position-x: 90%"
+                     v-bind:class="{ rotate4: rotate4 }"></v-col>
+
+
+              <v-col cols="12" class="text-center btn-col " v-if="!playing">
+                <button
+                  @click="play()"
+                  style=" transform: translateY(-60vh); "
+                  type="button"><h1>INICIALIZAR</h1>
+                </button>
+              </v-col>
+            </v-row>
+
+
+          </video-background>
+        </kinesis-element>
+      </kinesis-container>
+    </section>
 
 
 
-  <section class="back " style=" overflow: hidden; z-index: 99;">
-    <kinesis-container v-bind:class="{blackout: turnBlack}" :duration="duration">
-      <kinesis-element type="depth"
-                       :strength="strength">
-        <video-background
-          ref="video"
-          :loop="loop"
-          :autoplay="autoplay"
-          :muted="muted"
-          :src="require('../../assets/Video Intro.mp4')"
-          @ended="videoEnded()"
-          class="video-size"
-
-        >
-
-
-          <v-row class="justify-center intro-row " v-bind:class="{clear: clear}">
-            <v-col cols="3" class=" black rotate-90 " style="height: 100vh;"
-                   v-bind:class="{ rotate1: rotate1 }"></v-col>
-            <v-col cols="3" class="black  rotate-90 " style="background-position-x: 30%"
-                   v-bind:class="{ rotate2: rotate2 }">
-
-
-            </v-col>
-            <v-col cols="3" class="black rotate-90" style="background-position-x: 60%"
-                   v-bind:class="{ rotate3: rotate3 }">
-
-
-            </v-col>
-            <v-col cols="3" class="black rotate-90" style="background-position-x: 90%"
-                   v-bind:class="{ rotate4: rotate4 }"></v-col>
-
-            <v-col cols="12" class="text-center btn-col" v-if="!playing">
-
-
-
-              <button
-                @click="play()"
-                style="color: white; transform: translateY(-60vh); "
-                type="button"><h1>INICIALIZAR</h1>
-              </button>
-
-
-            </v-col>
-          </v-row>
-
-
-        </video-background>
-      </kinesis-element>
-
-    </kinesis-container>
-
-  </section>
-</div>
-
-
+  </div>
 
 
   <!-- <section class="back " style=" overflow: hidden;">
@@ -170,7 +157,7 @@
       rotate3: false,
       rotate4: false,
       i: 1,
-      strength: 25,
+      strength: 50,
       duration: 1500,
       turnBlack: false,
     }),
@@ -181,6 +168,7 @@
         this.rotateCols();
         let me = this;
         this.playing = true;
+        this.strength = 20;
 
         setTimeout(function () {
           me.turnBlack = true;
@@ -191,6 +179,14 @@
       },
 
       rotateCols() {
+        let col1 = document.querySelector('.col1')
+        let col2 = document.querySelector('.col2')
+
+
+        col1.setAttribute("style", "background-color: black ;")
+        col2.setAttribute("style", "background-color: black ;")
+
+
         this.rotate1 = true;
         this.rotate2 = true;
         this.rotate3 = true;
@@ -199,7 +195,7 @@
 
       videoEnded() {
         this.clear = true;
-        setTimeout(this.$router.replace('/teste'), 1000)
+        this.$router.replace('/home');
       },
 
     },
@@ -219,24 +215,34 @@
 
 
 <style scoped>
-/*
+  btn:focus {
+    outline: none;
+  }
 
-  h1::after {
-    content: '|';
-    opacity: 1;
-    margin-left: 5px;
-    display: inline-block;
-    animation: blink .7s infinite;
+  /*
+
+    h1::after {
+      content: '|';
+      opacity: 1;
+      margin-left: 5px;
+      display: inline-block;
+      animation: blink .7s infinite;
+
+    }
+
+
+    h1 {
+      font-family: 'Michroma', sans-serif;
+      font-size: 40px;
+    }
+
+  */
+
+
+  .col1 {
 
   }
 
-
-  h1 {
-    font-family: 'Michroma', sans-serif;
-    font-size: 40px;
-  }
-
-*/
   .intro-row {
     width: 100vw;
     height: 100vh;
@@ -267,8 +273,6 @@
 
   .rotate-90 {
     transform: rotateY(90deg);
-
-
   }
 
   .rotate1 {
@@ -341,7 +345,7 @@
   .particles {
     background-image: url('../../assets/tech.jpg');
 
-    background-color: transparent;
+    background-color: #222222;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -375,13 +379,14 @@
   }
 
   h1 {
-    right: -35vh;
+    right: -30vh;
+    top: -2vh;
 
     position: absolute;
-    font-family: 'Michroma', Arial, sans-serif;
-    font-size: calc(20px + 2vw);
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: calc(20px + 3vw);
     font-weight: 700;
-    color: white;
+    color: #dedede;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     text-shadow: 0 0 0.15em lightgrey;
@@ -466,6 +471,7 @@
       transform: translate(-49%, -53%);
     }
   }
+
 
 
 </style>
