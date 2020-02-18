@@ -31,7 +31,7 @@
             :loop="loop"
             :autoplay="autoplay"
             :muted="muted"
-            :src="require('../../assets/Video Intro.mp4')"
+            :src="require('../../assets/videointro.mp4')"
             @ended="videoEnded()"
             class="video-size"
           >
@@ -157,7 +157,7 @@
       rotate3: false,
       rotate4: false,
       i: 1,
-      strength: 20,
+      strength: 15,
       duration: 1500,
       turnBlack: false,
     }),
@@ -343,7 +343,7 @@
   /* teste */
 
   .particles {
-    background-image: url('../../assets/tech.jpg');
+    background-image: url('../../assets/banner01.jpg');
 
     background-color: #222222;
     background-size: cover;

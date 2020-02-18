@@ -1,85 +1,54 @@
 <template>
-  <section >
+  <section>
     <v-row class="align-center title-padding  ">
-      <v-col cols="12" class="text-center" style="z-index: 99;">
+      <v-col v-bind:class="{animation: isIntersecting }" cols="12" class="text-center contact-title">
         <h1
           style="font-size: -webkit-xxx-large; color:white;  font-family: Michroma;"> Contato</h1>
       </v-col>
     </v-row>
-    <v-row class="justify-center">
-        <v-card dark flat width="550" style="background-color: transparent; z-index: 99;">
-          <form>
-            <v-text-field
-              v-model="name"
-              :error-messages="nameErrors"
-              label="Nome"
-              required
-              @input="$v.name.$touch()"
-              @blur="$v.name.$touch()"
-            ></v-text-field>
-            <v-text-field
-              v-model="contactEmail"
-              :error-messages="emailErrors"
-              label="E-mail"
-              required
-              @input="$v.email.$touch()"
-              @blur="$v.email.$touch()"
-            ></v-text-field>
-            <v-textarea
-              name="input-7-1"
-              label="Mensagem"
-              value=""
-            ></v-textarea>
-            <v-row class="justify-center">
-              <v-btn class="mr-4 primary" depressed @click="submit">Enviar</v-btn>
-              <v-btn @click="clear" depressed outlined>Limpar</v-btn>
-            </v-row>
-          </form>
-        </v-card>
+    <v-row class="justify-center"
+           v-intersect="{
+            handler: onIntersect,
+            options: {
+              threshold: [0, 0.5, 1.0]
+            }
+          }">
+
+      <v-card
+        v-bind:class="{animation: isIntersecting }"
+        dark flat width="550" class="contact-card">
+        <form>
+          <v-text-field
+            v-model="name"
+            :error-messages="nameErrors"
+            label="Nome"
+            required
+            @input="$v.name.$touch()"
+            @blur="$v.name.$touch()"
+          ></v-text-field>
+          <v-text-field
+            v-model="contactEmail"
+            :error-messages="emailErrors"
+            label="E-mail"
+            required
+            @input="$v.email.$touch()"
+            @blur="$v.email.$touch()"
+          ></v-text-field>
+          <v-textarea
+            name="input-7-1"
+            label="Mensagem"
+            value=""
+          ></v-textarea>
+          <v-row class="justify-center">
+            <v-btn class="mr-4 primary" depressed @click="submit">Enviar</v-btn>
+            <v-btn @click="clear" depressed outlined>Limpar</v-btn>
+          </v-row>
+        </form>
+      </v-card>
 
     </v-row>
 
-    <v-row style="margin-top: 65px" class="no-gutters white">
-      <v-spacer/>
-      <v-col class="text-center mt-5" cols="3" style="z-index: 99;">
-        <v-icon x-large color="black" class="mr-2"> phone</v-icon>
-        <span class="black--text align-center main-font"><strong>{{phone}}</strong> </span>
-      </v-col>
-      <v-spacer/>
-    </v-row>
 
-    <v-row class="no-gutters  white">
-      <v-spacer/>
-      <v-col class="text-center" cols="3" style="margin-left: 35px; z-index: 99;">
-        <v-icon x-large color="black" class="mr-2"> mail</v-icon>
-        <span class="black--text align-center main-font"> <strong>{{email}} </strong></span>
-      </v-col>
-      <v-spacer/>
-    </v-row>
-
-    <v-row class="no-gutters white">
-      <v-spacer/>
-      <v-col cols="1" class="align-icon" style="z-index: 99;">
-        <a target="_blank"
-           href="https://github.com">
-          <v-img height="65" width="95" class="ml-3" :src="require('../../assets/github.jpg')"/>
-        </a>
-      </v-col>
-      <v-spacer/>
-    </v-row>
-
-
-    <v-row class="no-gutters white">
-      <v-spacer/>
-      <v-col cols="1" class="align-icon mb-5" style="z-index: 99;">
-        <a target="_blank"
-           href="https://linkedin.com">
-          <v-img height="30" width="150" class="ml-2"
-                 :src="require('../../assets/linkedin.jpg')"/>
-        </a>
-      </v-col>
-      <v-spacer/>
-    </v-row>
   </section>
 </template>
 
@@ -115,6 +84,9 @@
         'Item 4',
       ],
       checkbox: false,
+      isIntersecting: false,
+
+
     }),
 
     computed: {
@@ -135,6 +107,14 @@
     },
 
     methods: {
+      onIntersect(entries, observer) {
+        this.isIntersecting = entries[0].intersectionRatio >= 0.5
+
+        if (this.isIntersecting == true) {
+          this.isIntersecting = true;
+        }
+      },
+
       submit() {
         this.$v.$touch()
       },
@@ -150,10 +130,6 @@
 </script>
 
 <style scoped>
-  .translate-top-footer {
-    transform: translateY(-780px);
-    height: 0px;
-  }
 
   .align-icon {
     text-align: -webkit-center;
@@ -176,7 +152,6 @@
   }
 
 
-
   h1::after {
     content: '|';
     opacity: 1;
@@ -184,8 +159,6 @@
     display: inline-block;
     animation: blink .7s infinite;
   }
-
-
 
 
   @keyframes shake {
@@ -213,5 +186,40 @@
       filter: blur(0.007em);
       transform: translate(0) rotate(-0.5deg);
     }
+  }
+
+  .animation {
+    -webkit-animation: translateX 1s ease-out forwards;
+    -o-animation: translateX 1s ease-out forwards;
+    animation: translateX 1s ease-out forwards;
+  }
+
+
+  @keyframes translateX {
+    from {
+
+    }
+
+    to {
+      -webkit-transform: translateX(0vh);
+      -moz-transform: translateX(0vh);
+      -ms-transform: translateX(0vh);
+      -o-transform: translateX(0vh);
+      transform: translateX(0vh);
+    }
+  }
+
+
+  .contact-card {
+    background-color: transparent;
+    z-index: 99;
+    transform: translateX(80vw);
+  }
+
+  .contact-title {
+    background-color: transparent;
+    z-index: 99;
+    transform: translateX(-80vw);
+
   }
 </style>

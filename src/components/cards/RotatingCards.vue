@@ -1,24 +1,34 @@
 <template>
-  <v-container fluid class="transparent align-center mt-5"  style="height: 100vh;">
-      <section class="image-cards mt-3 mx-5 mx-auto" style="z-index: 99" >
-        <div class="image-cards__content">
-          <a
-            target="_blank"
-            class="image-cards__item d-flex align-items-center justify-content-center"
-            href="https://vuejs.org/"
-          ></a>
-          <a
-            target="_blank"
-            class="image-cards__item d-flex align-items-center justify-content-center"
-            href="https://vuetifyjs.com/pt-BR/"
-          ></a>
-          <a
-            target="_blank"
-            class="image-cards__item d-flex align-items-center justify-content-center"
-            href="https://github.com/"
-          ></a>
-        </div>
-      </section>
+  <v-container fluid class="transparent align-center mt-5 full-viewport">
+    <v-col cols="12" class="z-index-99" ></v-col>
+    <section
+      v-intersect="{
+            handler: onIntersect,
+            options: {
+              threshold: [0, 0.5, 1.0]
+            }
+          }"
+      v-bind:class="{grow: isIntersecting }"
+      class="image-cards mt-3 mx-5 mx-auto grow-section z-index-99 shrink"
+    >
+      <div class="image-cards__content">
+        <a
+          target="_blank"
+          class="image-cards__item d-flex align-items-center justify-content-center"
+          href="https://vuejs.org/"
+        ></a>
+        <a
+          target="_blank"
+          class="image-cards__item d-flex align-items-center justify-content-center"
+          href="https://vuetifyjs.com/pt-BR/"
+        ></a>
+        <a
+          target="_blank"
+          class="image-cards__item d-flex align-items-center justify-content-center"
+          href="https://github.com/"
+        ></a>
+      </div>
+    </section>
   </v-container>
 </template>
 
@@ -29,12 +39,26 @@
     name: "Products",
 
     data: () => ({
-      mobile: isMobile ? true : false
+      mobile: isMobile ? true : false,
+      isIntersecting: false,
     }),
 
     methods: {
       initialize() {
       },
+
+      onIntersect(entries, observer) {
+        this.isIntersecting = entries[0].intersectionRatio >= 0.5
+
+
+        if (this.isIntersecting == true) {
+          this.isIntersecting = true;
+
+        }
+
+
+      },
+
 
       created() {
         this.initialize();
@@ -200,6 +224,42 @@
     }
     to {
       transform: scale(1, 1);
+    }
+  }
+
+
+  .shrink {
+    opacity: 0;
+    -webkit-transform: scale(.1);
+    -moz-transform: scale(.1);
+    -ms-transform: scale(.1);
+    -o-transform: scale(.1);
+    transform: scale(.1);
+  }
+
+  .grow {
+
+    -webkit-animation: growSection 1s ease-out forwards;
+    -o-animation: growSection 1s ease-out forwards;
+    animation: growSection 1s ease-out forwards;
+  }
+
+  @keyframes growSection {
+    from {
+      -webkit-transform: scale(.1);
+      -moz-transform: scale(.1);
+      -ms-transform: scale(.1);
+      -o-transform: scale(.1);
+      transform: scale(.1);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
     }
   }
 </style>

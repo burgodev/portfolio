@@ -6,17 +6,21 @@
       <router-view/>
     </v-content>
 
+
+
   </v-app>
 </template>
 
 <script>
-  import Toolbar from './components/general/Toolbar';
+  import Toolbar from './components/general/ToolbarPortfolio2.0';
+  import Footer from './components/general/FooterPortfolio2.0';
 
 
   export default {
     name: 'App',
     components: {
       Toolbar,
+      Footer
 
 
     },

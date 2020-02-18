@@ -1,98 +1,135 @@
 <template>
+  <section style="height: 250vh;">
+
+    <v-container style="height: 300vh;">
+      <v-row class="justify-center align-center " style="height: 200vh;"
+             v-intersect="{
+            handler: onIntersect,
+            options: {
+              threshold: [0, 0.5, 1.0],
+
+            }
+          }"
+      >
+        <v-col
+
+          cols="12" class="text-center" style="z-index: 99;">
+          <h1 style="color:white;"> SOBRE </h1>
+        </v-col>
+
+        <v-col cols="6"
+               class="mx-auto mt-6"
+
+               style="transform: translateX(100vw); padding-left: 5vh; "
+
+               v-bind:class="{col1 : isIntersecting}"
+        >
+          <p style="color:white ">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at sollicitudin mauris. Suspendisse
+            cursus, lorem sit amet tincidunt efficitur, arcu augue mattis ante, sit amet placerat justo ligula a enim.
+            Cras a tortor ut libero gravida ultrices eget in tellus. Donec volutpat nulla scelerisque risus accumsan,
+            eget malesuada est vestibulum. Duis volutpat sollicitudin turpis, quis ullamcorper nisi. Nulla porttitor
+            fermentum magna in cursus. Quisque id turpis eget velit ultrices fermentum. Nullam eleifend velit id elit
+            suscipit, ac tincidunt orci tempor. Curabitur nec ultrices nisi, quis aliquam risus. Duis ex ligula,
+            viverra
+            eu ipsum at, dignissim faucibus magna. Maecenas aliquet, ipsum ut porttitor viverra, erat mauris sagittis
+            lectus, at iaculis metus orci id ante.
+
+            Nullam at tincidunt purus, eget facilisis velit. Duis in leo tellus. Donec ut diam dapibus, volutpat mi
+            at,
+            maximus est. Praesent ornare ex massa, a semper nisi molestie at. Aenean quis lectus finibus ex mollis
+            posuere a et erat. Fusce vehicula tempor facilisis. Vestibulum dignissim et urna nec gravida. Etiam
+            iaculis
+            leo in accumsan egestas. Aenean nec erat quis augue ultrices efficitur ut cursus enim. Vivamus pulvinar,
+            ipsum in facilisis tristique, libero sem vehicula nulla, eu convallis purus mauris non erat. Quisque
+            malesuada mi sem, eget placerat sem gravida vel. Proin blandit pretium ante.
+          </p>
+        </v-col>
+
+        <v-col cols="6" style="transform: translateY(100vh); transition: 1s; opacity: 0; "
+
+               v-bind:class="{col2  : isIntersecting}">
+          <p style="color:white ">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at sollicitudin mauris. Suspendisse
+            cursus, lorem sit amet tincidunt efficitur, arcu augue mattis ante, sit amet placerat justo ligula a enim.
+            Cras a tortor ut libero gravida ultrices eget in tellus. Donec volutpat nulla scelerisque risus accumsan,
+            eget malesuada est vestibulum. Duis volutpat sollicitudin turpis, quis ullamcorper nisi. Nulla porttitor
+            fermentum magna in cursus. Quisque id turpis eget velit ultrices fermentum. Nullam eleifend velit id elit
+            suscipit, ac tincidunt orci tempor. Curabitur nec ultrices nisi, quis aliquam risus. Duis ex ligula,
+            viverra
+            eu ipsum at, dignissim faucibus magna. Maecenas aliquet, ipsum ut porttitor viverra, erat mauris sagittis
+            lectus, at iaculis metus orci id ante.
+
+            Nullam at tincidunt purus, eget facilisis velit. Duis in leo tellus. Donec ut diam dapibus, volutpat mi
+            at,
+            maximus est. Praesent ornare ex massa, a semper nisi molestie at. Aenean quis lectus finibus ex mollis
+            posuere a et erat. Fusce vehicula tempor facilisis. Vestibulum dignissim et urna nec gravida. Etiam
+            iaculis
+            leo in accumsan egestas. Aenean nec erat quis augue ultrices efficitur ut cursus enim. Vivamus pulvinar,
+            ipsum in facilisis tristique, libero sem vehicula nulla, eu convallis purus mauris non erat. Quisque
+            malesuada mi sem, eget placerat sem gravida vel. Proin blandit pretium ante.
+          </p>
 
 
-  <v-container>
-    <v-row class="justify-center align-center mt-12" style="height: auto;">
-      <v-col cols="12" class="text-center" style="z-index: 99;">
-        <h1 style="color:white;"> SOBRE </h1>
-      </v-col>
-      <v-col cols="6"  style=" z-index: 99;">
-        <p style="color:white ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at sollicitudin mauris. Suspendisse
-          cursus, lorem sit amet tincidunt efficitur, arcu augue mattis ante, sit amet placerat justo ligula a enim.
-          Cras a tortor ut libero gravida ultrices eget in tellus. Donec volutpat nulla scelerisque risus accumsan,
-          eget malesuada est vestibulum. Duis volutpat sollicitudin turpis, quis ullamcorper nisi. Nulla porttitor
-          fermentum magna in cursus. Quisque id turpis eget velit ultrices fermentum. Nullam eleifend velit id elit
-          suscipit, ac tincidunt orci tempor. Curabitur nec ultrices nisi, quis aliquam risus. Duis ex ligula, viverra
-          eu ipsum at, dignissim faucibus magna. Maecenas aliquet, ipsum ut porttitor viverra, erat mauris sagittis
-          lectus, at iaculis metus orci id ante.
+        </v-col>
 
-          Nullam at tincidunt purus, eget facilisis velit. Duis in leo tellus. Donec ut diam dapibus, volutpat mi at,
-          maximus est. Praesent ornare ex massa, a semper nisi molestie at. Aenean quis lectus finibus ex mollis
-          posuere a et erat. Fusce vehicula tempor facilisis. Vestibulum dignissim et urna nec gravida. Etiam iaculis
-          leo in accumsan egestas. Aenean nec erat quis augue ultrices efficitur ut cursus enim. Vivamus pulvinar,
-          ipsum in facilisis tristique, libero sem vehicula nulla, eu convallis purus mauris non erat. Quisque
-          malesuada mi sem, eget placerat sem gravida vel. Proin blandit pretium ante.
-        </p>
+        <v-col cols="6" class="mt-12" style="transform: translateY(-100vh); transition: 1s; opacity: 0;   "
+
+               v-bind:class="{col1 : isIntersecting}">
+          <p style="color:white ">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at sollicitudin mauris. Suspendisse
+            cursus, lorem sit amet tincidunt efficitur, arcu augue mattis ante, sit amet placerat justo ligula a enim.
+            Cras a tortor ut libero gravida ultrices eget in tellus. Donec volutpat nulla scelerisque risus accumsan,
+            eget malesuada est vestibulum. Duis volutpat sollicitudin turpis, quis ullamcorper nisi. Nulla porttitor
+            fermentum magna in cursus. Quisque id turpis eget velit ultrices fermentum. Nullam eleifend velit id elit
+            suscipit, ac tincidunt orci tempor. Curabitur nec ultrices nisi, quis aliquam risus. Duis ex ligula,
+            viverra
+            eu ipsum at, dignissim faucibus magna. Maecenas aliquet, ipsum ut porttitor viverra, erat mauris sagittis
+            lectus, at iaculis metus orci id ante.
+
+            Nullam at tincidunt purus, eget facilisis velit. Duis in leo tellus. Donec ut diam dapibus, volutpat mi
+            at,
+            maximus est. Praesent ornare ex massa, a semper nisi molestie at. Aenean quis lectus finibus ex mollis
+            posuere a et erat. Fusce vehicula tempor facilisis. Vestibulum dignissim et urna nec gravida. Etiam
+            iaculis
+            leo in accumsan egestas. Aenean nec erat quis augue ultrices efficitur ut cursus enim. Vivamus pulvinar,
+            ipsum in facilisis tristique, libero sem vehicula nulla, eu convallis purus mauris non erat. Quisque
+            malesuada mi sem, eget placerat sem gravida vel. Proin blandit pretium ante.
+          </p>
+
+        </v-col>
+
+        <v-col cols="6" style="transform: translateX(-100vw);   "
+
+               v-bind:class="{col2 : isIntersecting}">
+          <p style="color:white ">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at sollicitudin mauris. Suspendisse
+            cursus, lorem sit amet tincidunt efficitur, arcu augue mattis ante, sit amet placerat justo ligula a enim.
+            Cras a tortor ut libero gravida ultrices eget in tellus. Donec volutpat nulla scelerisque risus accumsan,
+            eget malesuada est vestibulum. Duis volutpat sollicitudin turpis, quis ullamcorper nisi. Nulla porttitor
+            fermentum magna in cursus. Quisque id turpis eget velit ultrices fermentum. Nullam eleifend velit id elit
+            suscipit, ac tincidunt orci tempor. Curabitur nec ultrices nisi, quis aliquam risus. Duis ex ligula,
+            viverra
+            eu ipsum at, dignissim faucibus magna. Maecenas aliquet, ipsum ut porttitor viverra, erat mauris sagittis
+            lectus, at iaculis metus orci id ante.
+
+            Nullam at tincidunt purus, eget facilisis velit. Duis in leo tellus. Donec ut diam dapibus, volutpat mi
+            at,
+            maximus est. Praesent ornare ex massa, a semper nisi molestie at. Aenean quis lectus finibus ex mollis
+            posuere a et erat. Fusce vehicula tempor facilisis. Vestibulum dignissim et urna nec gravida. Etiam
+            iaculis
+            leo in accumsan egestas. Aenean nec erat quis augue ultrices efficitur ut cursus enim. Vivamus pulvinar,
+            ipsum in facilisis tristique, libero sem vehicula nulla, eu convallis purus mauris non erat. Quisque
+            malesuada mi sem, eget placerat sem gravida vel. Proin blandit pretium ante.
+          </p>
+
+        </v-col>
 
 
-      </v-col>
 
-      <v-col cols="6" class="mt-12" style=" z-index: 99;">
-        <p style="color:white ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at sollicitudin mauris. Suspendisse
-          cursus, lorem sit amet tincidunt efficitur, arcu augue mattis ante, sit amet placerat justo ligula a enim.
-          Cras a tortor ut libero gravida ultrices eget in tellus. Donec volutpat nulla scelerisque risus accumsan,
-          eget malesuada est vestibulum. Duis volutpat sollicitudin turpis, quis ullamcorper nisi. Nulla porttitor
-          fermentum magna in cursus. Quisque id turpis eget velit ultrices fermentum. Nullam eleifend velit id elit
-          suscipit, ac tincidunt orci tempor. Curabitur nec ultrices nisi, quis aliquam risus. Duis ex ligula, viverra
-          eu ipsum at, dignissim faucibus magna. Maecenas aliquet, ipsum ut porttitor viverra, erat mauris sagittis
-          lectus, at iaculis metus orci id ante.
-
-          Nullam at tincidunt purus, eget facilisis velit. Duis in leo tellus. Donec ut diam dapibus, volutpat mi at,
-          maximus est. Praesent ornare ex massa, a semper nisi molestie at. Aenean quis lectus finibus ex mollis
-          posuere a et erat. Fusce vehicula tempor facilisis. Vestibulum dignissim et urna nec gravida. Etiam iaculis
-          leo in accumsan egestas. Aenean nec erat quis augue ultrices efficitur ut cursus enim. Vivamus pulvinar,
-          ipsum in facilisis tristique, libero sem vehicula nulla, eu convallis purus mauris non erat. Quisque
-          malesuada mi sem, eget placerat sem gravida vel. Proin blandit pretium ante.
-        </p>
-
-      </v-col>
-
-      <v-col cols="6" style=" z-index: 99;">
-        <p style="color:white ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at sollicitudin mauris. Suspendisse
-          cursus, lorem sit amet tincidunt efficitur, arcu augue mattis ante, sit amet placerat justo ligula a enim.
-          Cras a tortor ut libero gravida ultrices eget in tellus. Donec volutpat nulla scelerisque risus accumsan,
-          eget malesuada est vestibulum. Duis volutpat sollicitudin turpis, quis ullamcorper nisi. Nulla porttitor
-          fermentum magna in cursus. Quisque id turpis eget velit ultrices fermentum. Nullam eleifend velit id elit
-          suscipit, ac tincidunt orci tempor. Curabitur nec ultrices nisi, quis aliquam risus. Duis ex ligula, viverra
-          eu ipsum at, dignissim faucibus magna. Maecenas aliquet, ipsum ut porttitor viverra, erat mauris sagittis
-          lectus, at iaculis metus orci id ante.
-
-          Nullam at tincidunt purus, eget facilisis velit. Duis in leo tellus. Donec ut diam dapibus, volutpat mi at,
-          maximus est. Praesent ornare ex massa, a semper nisi molestie at. Aenean quis lectus finibus ex mollis
-          posuere a et erat. Fusce vehicula tempor facilisis. Vestibulum dignissim et urna nec gravida. Etiam iaculis
-          leo in accumsan egestas. Aenean nec erat quis augue ultrices efficitur ut cursus enim. Vivamus pulvinar,
-          ipsum in facilisis tristique, libero sem vehicula nulla, eu convallis purus mauris non erat. Quisque
-          malesuada mi sem, eget placerat sem gravida vel. Proin blandit pretium ante.
-        </p>
-
-      </v-col>
-
-      <v-col cols="6" class="mt-12" style=" z-index: 99;">
-        <p style="color:white ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at sollicitudin mauris. Suspendisse
-          cursus, lorem sit amet tincidunt efficitur, arcu augue mattis ante, sit amet placerat justo ligula a enim.
-          Cras a tortor ut libero gravida ultrices eget in tellus. Donec volutpat nulla scelerisque risus accumsan,
-          eget malesuada est vestibulum. Duis volutpat sollicitudin turpis, quis ullamcorper nisi. Nulla porttitor
-          fermentum magna in cursus. Quisque id turpis eget velit ultrices fermentum. Nullam eleifend velit id elit
-          suscipit, ac tincidunt orci tempor. Curabitur nec ultrices nisi, quis aliquam risus. Duis ex ligula, viverra
-          eu ipsum at, dignissim faucibus magna. Maecenas aliquet, ipsum ut porttitor viverra, erat mauris sagittis
-          lectus, at iaculis metus orci id ante.
-
-          Nullam at tincidunt purus, eget facilisis velit. Duis in leo tellus. Donec ut diam dapibus, volutpat mi at,
-          maximus est. Praesent ornare ex massa, a semper nisi molestie at. Aenean quis lectus finibus ex mollis
-          posuere a et erat. Fusce vehicula tempor facilisis. Vestibulum dignissim et urna nec gravida. Etiam iaculis
-          leo in accumsan egestas. Aenean nec erat quis augue ultrices efficitur ut cursus enim. Vivamus pulvinar,
-          ipsum in facilisis tristique, libero sem vehicula nulla, eu convallis purus mauris non erat. Quisque
-          malesuada mi sem, eget placerat sem gravida vel. Proin blandit pretium ante.
-        </p>
-
-      </v-col>
-    </v-row>
-  </v-container>
-
+      </v-row>
+    </v-container>
+  </section>
   <!-- <vue-particles
        color="#7aafff"
        :particleOpacity=".2"
@@ -124,9 +161,38 @@
   export default {
 
     name: "About.vue",
-    data: () => ({}),
+    data: () => ({
+      isIntersecting: false,
+      watcher: false,
+      options: {
+        rootMargin: '200px',
+        threshold: 1.0
+      }
 
-    methods: {},
+    }),
+
+    methods: {
+
+      onIntersect(entries, observer) {
+
+        if (this.watcher == false) {
+          this.isIntersecting = entries[0].intersectionRatio >= 0.5
+
+          console.log(this.isIntersecting)
+
+          if (this.isIntersecting == true) {
+
+            this.isIntersecting = true;
+            this.watcher = true;
+
+
+
+          }
+
+
+        }
+      }
+    },
 
     created() {
 
@@ -139,6 +205,73 @@
 
 
 <style scoped>
+  p{
+    padding: 5vh;
+    text-align: justify;
+  }
+  .col1 {
+    transition: 2s;
+    z-index: 99;
+    animation: animationcol1 2.5s ease-out forwards
+  }
+
+  .col2 {
+    transition: 2s;
+    z-index: 99;
+    animation: animationcol2 2.5s ease-out forwards
+  }
+
+  @keyframes animationcol1 {
+    from {
+
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translateX(0vw);
+      -moz-transform: translateX(0vw);
+      -ms-transform: translateX(0vw);
+      -o-transform: translateX(0vw);
+      transform: translateX(0vw);
+    }
+  }
+
+  @keyframes animationcol2 {
+    from {
+
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translateX(0vw) translateY(0vh);
+      -moz-transform: translateX(0vw) translateY(50vh);
+      -ms-transform: translateX(0vw) translateY(50vh);
+      -o-transform: translateX(0vw) translateY(50vh);
+      transform: translateX(0vw) translateY(30vh);
+    }
+  }
+
+  .col3 {
+    transition: 2s;
+    z-index: 99;
+    animation: animationcol3 2.5s ease-out forwards
+  }
+
+  @keyframes animationcol3 {
+    from {
+
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translateX(0vw) translateY(50vh);
+      -moz-transform: translateX(0vw) translateY(50vh);
+      -ms-transform: translateX(0vw) translateY(50vh);
+      -o-transform: translateX(0vw) translateY(50vh);
+      transform: translateX(0vw) translateY(50vh);
+    }
+  }
+
   .particles3 {
 
 
@@ -182,7 +315,6 @@
   }
 
 
-
   h1::after {
     content: '|';
     opacity: 1;
@@ -190,8 +322,6 @@
     display: inline-block;
     animation: blink .7s infinite;
   }
-
-
 
 
   @keyframes shake {

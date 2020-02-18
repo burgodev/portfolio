@@ -1,194 +1,184 @@
 <template>
-  <!--<section class="black" style="height: 100vh;">
-    <a href="#" class="glitch" data-glitch="INICIALIZAR">INICIALIZAR</a>
-  </section> -->
+  <section style="background-color: #222222">
+    <v-container
+
+      style="padding-left: 50px; padding-right: 50px;"
+    >
+
+      <!--- ROW 1 -->
+      <v-row style="margin-top: 100px; margin-bottom: 100px;">
+        <v-col cols="12">
+          <article>
+
+            <v-row
+              class="grow"
+              style="padding-top: 50px; "
+            >
+
+              <v-spacer/>
+              <v-col
+                cols="2"
+                class="rotate-icon"
+                style="background-color: #222222"
+
+              >
+                <v-icon size="100px" color="white" style="border: solid;  border-color: white;">book</v-icon>
+              </v-col>
+
+              <v-col
+                cols="3"
+                style=" margin-top: 20px; margin-left: 20px; "
+              >
+                <span
+                  style="font-family: 'Michroma', cursive;  font-size: xx-large;"
+                >
+                  CSS 3
+                  <br/>
+                </span>
+              </v-col>
+            </v-row>
 
 
-  <!--      <h1 data-text="black mirror"><span>black mirror</span></h1> -->
+            <!--- ROW 2 -->
+            <v-row
+              class="grow"
+              style=" padding-top: 55px"
+            >
+
+              <v-spacer/>
+              <v-col
+                cols="2"
+                class="rotate-icon"
+                style="background-color: #222222"
+
+              >
+                <v-icon color="white" size="100px" style="border: solid;  border-color: white;">info</v-icon>
+              </v-col>
+              <v-col cols="5" style="padding-top: 50px; ">
+                <span
+                  style="font-family: 'Michroma', cursive;  font-size: xx-large;"
+                  >HTML 5
+                  <br/>
+                </span>
+              </v-col>
+            </v-row>
+
+            <!--- ROW 3 -->
+            <v-row
+              class="grow"
+              style=" padding-top: 55px"
+            >
+              <v-spacer/>
+              <v-col
+                cols="2"
+                class="rotate-icon"
+                style="background-color: #222222; transform: rotateZ(-10deg);">
 
 
-  <!--  <v-container>
-      <v-row class="justify-center" style="height: 100vh; width: 100vw;">
-        <v-col cols="4">
-            <h1 data-text="black mirror"><span>black mirror</span></h1> -->
+                <v-icon color="white" size="100px" style="border: solid;  border-color: white;">school</v-icon>
+              </v-col>
 
- <div class="wrap-banner">
+              <v-col
+                cols="7"
+                style="align-self: center; "
+              >
+                                    <span
+                                      style="font-family: 'Michroma', cursive;  font-size: xx-large; "
+                                    >
+                                        JAVASCRIPT ES6+
+                                        <br/>
+                                    </span>
+              </v-col>
+            </v-row>
 
-    <vue-particles
-       color="#7aafff"
-       :particleOpacity="0.7"
-       :particlesNumber="150"
-       shapeType="circle"
-       :particleSize="4"
-       linesColor="#dedede"
-       :linesWidth="1"
-       :lineLinked="true"
-       :lineOpacity="0.4"
-       :linesDistance="150"
-       :moveSpeed="3"
-       :hoverEffect="true"
-       hoverMode="grab"
-       :clickEffect="true"
-       clickMode="push"
-       style="z-index: 1;"
-       class="particles"
-     >
+            <v-row
+              class="grow"
+              style="  padding-top: 55px"
+            >
+              <v-spacer/>
+              <v-col
+                cols="2"
+                class="rotate-icon"
+                style="transform: rotateZ(-10deg); background-color: #222222; transform: rotateZ(-10deg);"
+              >"
+              >
+                <v-icon color="white" size="100px" style="border: solid;  border-color: white;">work</v-icon>
+              </v-col>
+              <v-spacer/>
+              <v-col
+                cols="8"
 
+              >
+                                    <span
+                                      style="font-family: 'Michroma', cursive;  font-size: xx-large; "
+                                    >
+                                       VUE JS
+                                    </span>
+              </v-col>
+            </v-row>
+          </article>
+        </v-col>
+      </v-row>
+    </v-container>
 
-     </vue-particles>
-     <h1  class="pointer" style="z-index: 99; color: white"> INICIALIZAR </h1>
-
-
-
-
-   </div>
-
+  </section>
 
 </template>
-
-
 <script>
-  import RotatingCards from '../../components/cards/RotatingCards'
-
   export default {
-    components: {
-      RotatingCards
+    data: () => ({
+      isIntersecting: false,
+    }),
+
+    methods: {
+      teste() {
+        alert('foi')
+      }
     },
-    name: "Teste.vue",
-
-
   }
-
 </script>
-
 <style lang="scss">
-  body {
-    background-color: #232323;
-  }
 
-  .glitch {
-    font: {
-      size: 8.125em;
-      family: 'Raleway', sans-serif;
-      weight: 700;
-    }
-    text-decoration: none;
-    text-transform: uppercase;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    color: #fff;
-    letter-spacing: 5px;
-
-    &:before, &:after {
-      display: block;
-      content: attr(data-glitch);
-      text-transform: uppercase;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      opacity: .8;
-    }
-
-    &:after {
-      color: #f0f;
-      z-index: -2;
-    }
-
-    &:before {
-      color: #0ff;
-      z-index: -1;
-    }
-
-    &:hover {
-      &:before {
-        animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both 5
-      }
-
-      &:after {
-        animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both 5
-      }
-    }
-  }
-
-  @media only screen and (max-width: 400px) {
-    .glitch {
-      font-size: 3em;
-    }
-  }
-
-
-  @keyframes glitch {
-    0% {
-      transform: translate(0)
-    }
-    20% {
-      transform: translate(-5px, 5px)
-    }
-    40% {
-      transform: translate(-5px, -5px)
-    }
-    60% {
-      transform: translate(5px, 5px)
-    }
-    80% {
-      transform: translate(5px, -5px)
-    }
-    to {
-      transform: translate(0)
-    }
-  }
 </style>
 
 
 <style scoped>
-  .particles {
-    background-image: url('../../assets/tech.jpg');
+  .grow {
+    transition: 1s;
+  }
 
-    background-color: transparent;
-    background-size: cover;
+  .grow:hover {
+    transform: scale(1.1);
+  }
+
+  .rotate-icon {
+    transition: 1s;
+  }
+
+  .grow:hover .rotate-icon {
+    transform: rotateZ(0deg) !important;
+    background-color: white;
+  }
+
+  .rotate-icon {
+    transform: rotateZ(-10deg);
+  }
+
+
+  .v-icon {
+    filter: blur(0.007em);
+    animation: shake 2.5s linear infinite;
+
+  }
+
+  span {
+
+    text-align: center;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .wrap-banner {
-    position: relative;
-    -ms-flex-align: center;
-    -webkit-box-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #000;
-    overflow: hidden;
-  }
-
-  h1 {
-    top: 40vh;
-    position: absolute;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: calc(20px + 5vw);
+    font-family: 'Michroma', Arial, sans-serif;
+    font-size: calc(5px + .6vw);
     font-weight: 700;
-    color: black;
+    color: white;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     text-shadow: 0 0 0.15em lightgrey;
@@ -196,15 +186,6 @@
     white-space: nowrap;
     filter: blur(0.007em);
     animation: shake 2.5s linear infinite;
-  }
-
-  h1 span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    -webkit-clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
-    clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
   }
 
 
@@ -234,50 +215,5 @@
       transform: translate(0) rotate(-0.5deg);
     }
   }
-
-  /* h1::before,
-   h1::after {
-     content: attr(data-text);
-     position: absolute;
-     top: 0;
-     left: 0;
-   }
-
-   h1::before {
-     animation: crack1 2.5s linear forwards;
-     -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
-     clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
-   }
-
-   h1::after {
-     animation: crack2 2.5s linear forwards;
-     -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
-     clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
-   }
-
-
-  @keyframes crack1 {
-    0%, 95% {
-      transform: translate(-50%, -50%);
-    }
-
-    100% {
-      transform: translate(-51%, -48%);
-    }
-  }
-
-  @keyframes crack2 {
-    0%, 95% {
-      transform: translate(-50%, -50%);
-    }
-
-    100% {
-      transform: translate(-49%, -53%);
-    }
-  }
-
-
-*/
-
 
 </style>
