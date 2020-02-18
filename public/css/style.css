@@ -135,8 +135,8 @@
 /* ANIMATIONS */
 .toolbar-animation {
     opacity: 0;
-    -webkit-animation: fade-in ease-in 2.5s 7s forwards;
-    animation: fade-in ease-in 2.5s 7s forwards;
+    -webkit-animation: fade-in ease-in 2.5s 1.5s forwards;
+    animation: fade-in ease-in 2.5s 1.5s forwards;
 }
 
 .translate-top-title {
