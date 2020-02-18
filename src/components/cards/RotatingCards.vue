@@ -239,9 +239,9 @@
 
   .grow {
 
-    -webkit-animation: growSection 1s ease-out forwards;
-    -o-animation: growSection 1s ease-out forwards;
-    animation: growSection 1s ease-out forwards;
+    -webkit-animation: growSection .5s ease-out forwards;
+    -o-animation: growSection .5s ease-out forwards;
+    animation: growSection .5s ease-out forwards;
   }
 
   @keyframes growSection {

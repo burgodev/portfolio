@@ -121,7 +121,7 @@
                 <span
                   style="font-family: 'Michroma', cursive;  font-size: xx-large; "
                 >
-                  Problem Solver Mindset
+                  Ingles Fluente
                 </span>
                 </v-col>
               </v-row>
@@ -189,7 +189,7 @@
 
   .col1active {
     transition: 1s;
-    animation: translate0 1s forwards ease-out;
+    animation: translate0 .5s forwards ease-out;
 
   }
 

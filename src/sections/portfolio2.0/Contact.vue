@@ -189,9 +189,9 @@
   }
 
   .animation {
-    -webkit-animation: translateX 1s ease-out forwards;
-    -o-animation: translateX 1s ease-out forwards;
-    animation: translateX 1s ease-out forwards;
+    -webkit-animation: translateX .5s ease-out forwards;
+    -o-animation: translateX .5s ease-out forwards;
+    animation: translateX .5s ease-out forwards;
   }
 
 

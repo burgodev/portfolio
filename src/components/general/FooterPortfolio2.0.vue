@@ -31,8 +31,8 @@
       </v-col>
 
 
-      <v-col class="text-center mt-5 mb-3" cols="12" style=" z-index: 99;">
-        <span> {{ new Date().getFullYear() }} — <strong>BurgoDev</strong></span>
+      <v-col class="text-center my-3" cols="12" style=" z-index: 99;">
+        <span class="main-font"><strong> {{ new Date().getFullYear() }} — @copyright Filipe Burgonovo</strong></span>
       </v-col>
 
     </v-row>

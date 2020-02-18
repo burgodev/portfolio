@@ -212,13 +212,13 @@
   .col1 {
     transition: 2s;
     z-index: 99;
-    animation: animationcol1 2.5s ease-out forwards
+    animation: animationcol1 .5s ease-out forwards
   }
 
   .col2 {
     transition: 2s;
     z-index: 99;
-    animation: animationcol2 2.5s ease-out forwards
+    animation: animationcol2 .5s ease-out forwards
   }
 
   @keyframes animationcol1 {
