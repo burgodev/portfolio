@@ -78,7 +78,7 @@
     width: 100%;
     height: 100%;
     opacity: 0;
-    animation: fade-in 2s 7s linear forwards;
+    animation: fade-in 2s 1s linear forwards;
   }
 
 
